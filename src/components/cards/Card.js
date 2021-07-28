@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import productImg from "../images/product-1.png";
+import productImg from "../../images/product-1.png";
 
 function ReactProductCard(props) {
   return (

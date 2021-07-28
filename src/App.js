@@ -1,13 +1,13 @@
 import "./styles/styles.css";
-import ReactNavbar from "./components/Navbar";
+import Navbar from "./components/navigation/Navbar";
 import Header from "./components/Heading";
 import Section from "./components/Section";
 import Quantity from "./components/Quantity";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Test from "./pages/Test";
-import ProductCard from "./components/ProductCard";
+import ProductCard from "./components/cards/ProductCard";
 import product from "./images/product-1.png";
-import Cards from "./components/Cards";
+import Cards from "./components/cards/Cards";
 import Footer from "./components/Footer";
 
 const discover = {
@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <Router>
-        <ReactNavbar></ReactNavbar>
+        <Navbar></Navbar>
 
         <Switch>
           <Route exact path="/" component={Home} />

@@ -1,10 +1,9 @@
 import React from "react";
 import Quantity from "../components/Quantity";
 import Section from "../components/Section";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/cards/ProductCard";
 import product from "../images/product-1.png";
-import Cards from "../components/Cards";
-import ReactProductCard from "../components/Card";
+import Cards from "../components/cards/Cards";
 
 function Test() {
   return (
@@ -20,7 +19,6 @@ function Test() {
         <ProductCard title="test" img={product}></ProductCard>
         <ProductCard title="test" img={product}></ProductCard>
         <ProductCard title="test" img={product}></ProductCard>
-        <ReactProductCard></ReactProductCard>
       </Cards>
     </Section>
   );
