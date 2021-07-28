@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import NavItem from "./NavItem";
+import logo from "../../images/logo.svg";
 
 function Navbar() {
   return (
     <nav className="main-nav">
       <span>
-        <img className="logo" src="./logo.svg"></img>
+        <img className="logo" src={logo}></img>
       </span>
       <ul className="main-nav-items">
         <NavItem name="Testing ground" href="/test"></NavItem>
