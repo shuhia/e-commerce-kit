@@ -10,7 +10,7 @@ function Footer(props) {
         <div className="footer-widgets">
           <aside>
             <div>
-              <img src={footerLogo} />
+              <img src={footerLogo} alt="footer logo" />
               <p>
                 Your natural cnadle made for your home and for your wellness.
               </p>
@@ -26,7 +26,7 @@ function Footer(props) {
                     {list.links.map((item, index) => {
                       return (
                         <li>
-                          <a href="#">{item}</a>
+                          <a href="#home">{item}</a>
                         </li>
                       );
                     })}
@@ -38,7 +38,7 @@ function Footer(props) {
         </div>
       </footer>
       <div className="copyright">
-        <a>©Candleaf All Rights Reserved.</a>
+        <a href="#copyright">©Candleaf All Rights Reserved.</a>
       </div>
     </div>
   );

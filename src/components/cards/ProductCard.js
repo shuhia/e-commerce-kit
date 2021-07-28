@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+
 import { useHistory } from "react-router-dom";
 
 function ProductCard(props) {

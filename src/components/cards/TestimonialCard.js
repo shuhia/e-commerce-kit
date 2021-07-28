@@ -5,7 +5,6 @@ const styles = { container: { display: "flex", flexFlow: "row wrap" } };
 const TestimonialCard = () => {
   return (
     <div styles={styles.container}>
-      <img />
       <div className="rating"></div>
       <div className="comment"></div>
       <div className="name"></div>
