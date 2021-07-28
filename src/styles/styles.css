@@ -1,6 +1,17 @@
+@import url(./buttons.css);
+@import url(./cards.css);
+
+:root {
+  --color1: #56b280;
+  --color2: #272727;
+  --color3: white;
+}
+
 .main-nav {
   /* nav/desktop */
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 75px;
   display: grid;
@@ -41,6 +52,7 @@
 .main-nav-item a:hover {
   padding: 20px;
   background-color: rgb(231, 231, 231);
+  transform: scale(1.2);
 }
 
 .right-menu {
@@ -53,9 +65,17 @@
   margin: 10px;
 }
 
+.right-menu img:hover {
+  transform: scale(1.5);
+}
+
 .logo {
   width: 126px;
   height: 34px;
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }
 
 .profile {
@@ -87,56 +107,82 @@
   align-items: center;
 }
 
-.background-card {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  width: 730px;
-  min-height: 349px;
-  background: rgba(247, 248, 250, 0.8);
-  backdrop-filter: blur(12px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 2px;
-  text-align: center;
-}
-
-.background-card-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 58px;
-  /* or 144% */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.background-card-description {
-  max-width: 500px;
-}
-
-.background-card-link {
-  /* green */
-  display: flex;
-  width: 310px;
-  height: 40px;
-  color: white;
-  background: #56b280;
-  border-radius: 4px;
-  justify-content: center;
-  align-items: center;
-}
-
 .section {
   height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: white;
 }
 
-.product-card {
-  width: 255px;
-  height: 230px;
+.disabled {
+  background-color: grey;
+  color: black;
+  border: 1px grey solid;
+}
+
+.input-big {
+  width: 445px;
+  height: 40px;
+}
+
+.input-medium {
+  width: 216px;
+  height: 40px;
+}
+
+.input-small {
+  width: 140px;
+  height: 40px;
+}
+
+.quantity {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 75px;
+  height: 61px;
+  align-items: center;
+  text-align: center;
+}
+.quantity-title {
+  grid-row: 1/1;
+  grid-column: 1/4;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  /* or 142% */
+
+  text-align: center;
+}
+
+.quantity-value {
+  max-width: 3ch;
+  text-align: center;
+  border: none;
+}
+
+.quantity-controller {
+  min-width: 3ch;
+  text-align: center;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  border: 1px solid var(--color1);
+  display: flex;
+}
+
+.quantity-controller button {
+  background-color: white;
+  border: 0;
+}
+
+.grid-auto-fill {
+  display: grid;
+  grid-auto-flow: row;
 }

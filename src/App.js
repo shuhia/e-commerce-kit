@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/styles.css";
+import Navbar from "./components/Navbar";
+import Header from "./components/Heading";
+import Section from "./components/Section";
+import Quantity from "./components/Quantity";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Test from "./pages/Test";
+import ProductCard from "./components/ProductCard";
+import product from "./images/product-1.png";
+import Cards from "./components/Cards";
+
+function Home() {
+  return (
+    <>
+      <Header></Header>
+      <Section>
+        <Cards
+          title="Prodcuts"
+          description="Order it for you or for your beloved ones."
+        >
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+        </Cards>
+      </Section>
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar></Navbar>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/test" component={Test}></Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
