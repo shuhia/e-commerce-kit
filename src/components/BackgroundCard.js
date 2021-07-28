@@ -14,7 +14,7 @@ function BackgroundCard() {
           your pleasure moments
         </p>
       </div>
-      <BigButton name="discover our collection"></BigButton>
+      <BigButton name="discover our collection" href="#products"></BigButton>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Section from "../components/Section";
 import ProductCard from "../components/ProductCard";
 import product from "../images/product-1.png";
 import Cards from "../components/Cards";
+import ReactProductCard from "../components/Card";
 
 function Test() {
   return (
@@ -19,6 +20,7 @@ function Test() {
         <ProductCard title="test" img={product}></ProductCard>
         <ProductCard title="test" img={product}></ProductCard>
         <ProductCard title="test" img={product}></ProductCard>
+        <ReactProductCard></ReactProductCard>
       </Cards>
     </Section>
   );

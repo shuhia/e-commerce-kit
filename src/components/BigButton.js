@@ -1,12 +1,12 @@
 import React from "react";
 
 function BigButton(props) {
-  const { name = "Button" } = props;
+  const { name = "Button", href = "#products" } = props;
   return (
-    <div className={"big-button"}>
+    <a className={"big-button"} href={href}>
       <span className="big-button-icon"></span>
       <span>{name}</span>
-    </div>
+    </a>
   );
 }
 
