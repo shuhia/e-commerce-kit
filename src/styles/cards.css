@@ -78,6 +78,7 @@
 
 .cards {
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin: 0 165px;
   padding: 20px;
@@ -90,8 +91,9 @@
 }
 
 .cards-container {
-  max-width: 100%;
-  display: flex;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, 255px);
   grid-gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
