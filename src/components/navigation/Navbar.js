@@ -32,34 +32,38 @@ function Navbar() {
     }
   }, [onMobile]);
 
+  const navMobile = (
+    <span
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
+      }}
+    >
+      <span
+        style={{ margin: "auto 0" }}
+        onClick={() => {
+          setShowMenu((prev) => !prev);
+        }}
+      >
+        {!showMenu ? <img src={menu}></img> : <img src={clearMenu}></img>}
+      </span>
+      <img style={{ margin: "auto" }} className="logo" src={logo}></img>
+    </span>
+  );
+
+  const navDesktop = (
+    <>
+      <img className="logo" src={logo}></img>
+      {navItems}
+    </>
+  );
+
   return (
     <nav className="main-nav">
-      {onMobile && (
-        <span
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-          }}
-        >
-          <span
-            style={{ margin: "auto 0" }}
-            onClick={() => {
-              setShowMenu((prev) => !prev);
-            }}
-          >
-            {!showMenu ? <img src={menu}></img> : <img src={clearMenu}></img>}
-          </span>
-          <img style={{ margin: "auto" }} className="logo" src={logo}></img>
-        </span>
-      )}
+      {onMobile && { navMobile }}
       <ul className="main-nav-ul">
         {onMobile && showMenu && <>{navItems}</>}
-        {!onMobile && (
-          <>
-            <img className="logo" src={logo}></img>
-            {navItems}
-          </>
-        )}
+        {!onMobile && { navDesktop }}
       </ul>
     </nav>
   );
