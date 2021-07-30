@@ -4,26 +4,14 @@ import NavItem from "./NavItem";
 import logo from "../../images/logo.svg";
 import menu from "../../images/menu.svg";
 import clearMenu from "../../images/clear-menu.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import Cart from "../business/Cart";
 
-function Navbar() {
+function Navbar({ navItems }) {
   const [showMenu, setShowMenu] = useState(false);
   const onMobile = useMediaQuery({ query: "(max-width:800px)" });
-  const navItems = (
-    <>
-      <NavItem name="Testing ground" href="/test"></NavItem>
-      <NavItem name="Discover"></NavItem>
-      <NavItem name="About"></NavItem>
-      <NavItem name="Contact us"></NavItem>
-      <NavItem>
-        <img className="profile" src="./profile.svg"></img>
-      </NavItem>
-      <NavItem>
-        <img className="cart" src="./cart.svg"></img>
-      </NavItem>
-    </>
-  );
+  const isFocusNavbar = useRef();
   // Reset toggle
   useEffect(() => {
     if (!onMobile) {
@@ -35,11 +23,11 @@ function Navbar() {
     <span
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr",
+        gridTemplateColumns: "auto auto auto",
+        alignItems: "center",
       }}
     >
       <span
-        style={{ margin: "auto 0" }}
         onClick={() => {
           setShowMenu((prev) => !prev);
         }}
@@ -60,7 +48,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="main-nav">
+    <nav className="main-nav" ref={isFocusNavbar}>
       {onMobile && navMobile}
       <ul className="main-nav-ul">
         {onMobile && showMenu && <>{navItems}</>}

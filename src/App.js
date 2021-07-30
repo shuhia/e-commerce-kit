@@ -1,13 +1,15 @@
 import "./styles/styles.css";
 import Navbar from "./components/navigation/Navbar";
-import Header from "./components/Header";
-import Section from "./components/Section";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./pages/Test";
-import ProductCard from "./components/cards/ProductCard";
-import product from "./images/product-1.png";
-import Cards from "./components/cards/Cards";
+
 import Footer from "./components/Footer";
+import NavItem from "./components/navigation/NavItem";
+import Cart from "./components/business/Cart";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 const discover = {
   name: "discover",
@@ -21,38 +23,32 @@ const info = {
 
 const lists = [discover, about, info];
 
-function Home() {
-  return (
-    <>
-      <Header></Header>
-      <Section id="products">
-        <Cards
-          title="Products"
-          description="Order it for you or for your beloved ones."
-        >
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-        </Cards>
-      </Section>
-    </>
-  );
-}
-
 function App() {
   return (
     <>
       <Router>
-        <Navbar></Navbar>
+        <Navbar
+          navItems={
+            <>
+              <NavItem name="Discover"></NavItem>
+              <NavItem name="About" href="/about"></NavItem>
+              <NavItem name="Contact us"></NavItem>
+              <NavItem name="Test" href="/test"></NavItem>
+              <NavItem>
+                <img className="profile" src="./profile.svg"></img>
+              </NavItem>
+
+              <NavItem>
+                <Cart></Cart>
+              </NavItem>
+            </>
+          }
+        ></Navbar>
 
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/test" component={Test}></Route>
+          <Route exact path="/about" component={About}></Route>
         </Switch>
         <Footer lists={lists}></Footer>
       </Router>

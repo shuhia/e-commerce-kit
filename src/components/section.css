@@ -1,0 +1,41 @@
+section {
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 10% 10%;
+  text-align: center;
+}
+
+section header h1 {
+  text-transform: capitalize;
+}
+#section-benefits {
+  background-color: #f7f8fa;
+}
+
+#section-benefits ul {
+  list-style: url("./../images/checkmark.svg");
+  text-align: left;
+}
+
+#section-benefits img {
+  max-width: 100%;
+}
+
+#section-testimonials {
+  background-color: rgba(86, 178, 128, 0.1);
+  overflow: scroll;
+}
+
+#section-products {
+  padding: 5% 10%;
+}
+
+.section-button {
+  padding: 20px;
+}

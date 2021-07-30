@@ -30,10 +30,10 @@ function Quantity() {
         }}
       >
         <button
-          className="button-increase"
-          onClick={() => dispatch({ type: "increase" })}
+          className="button-decrease"
+          onClick={() => dispatch({ type: "decrease" })}
         >
-          <b>+</b>
+          <b>-</b>
         </button>
         <input
           className="quantity-value"
@@ -44,10 +44,10 @@ function Quantity() {
           maxLength={3}
         />
         <button
-          className="button-decrease"
-          onClick={() => dispatch({ type: "decrease" })}
+          className="button-increase"
+          onClick={() => dispatch({ type: "increase" })}
         >
-          <b>-</b>
+          <b>+</b>
         </button>
       </div>
     </div>

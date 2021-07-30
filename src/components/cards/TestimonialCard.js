@@ -5,7 +5,10 @@ const styles = { container: { display: "flex", flexFlow: "row wrap" } };
 const TestimonialCard = () => {
   return (
     <div styles={styles.container}>
-      <div className="rating"></div>
+      <div></div>
+      <div className="rating">
+        <span></span>
+      </div>
       <div className="comment"></div>
       <div className="name"></div>
     </div>

@@ -39,7 +39,9 @@ function Footer(props) {
       </footer>
       <div className="copyright">
         <a href="#copyright">©Candleaf All Rights Reserved.</a>
-        <a href="#copyright"> Implemented by Alex On</a>
+        <a href="https://github.com/shuhia/e-commerce-kit">
+          Implemented by Alex On
+        </a>
       </div>
     </div>
   );

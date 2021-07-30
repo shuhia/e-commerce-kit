@@ -1,9 +1,11 @@
 .button {
   /* green */
+  display: flex;
   width: 150px;
   height: 40px;
   background: var(--color1);
   border-radius: 4px;
+  justify-content: center;
 }
 
 .button span {
@@ -15,6 +17,14 @@
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+.button:hover {
+  background-color: var(--color3);
+  color: var(--color1);
+  border: 1px var(--color1) solid;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .big-button {
