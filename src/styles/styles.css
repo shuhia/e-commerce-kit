@@ -1,97 +1,11 @@
 @import url(./buttons.css);
 @import url(./cards.css);
+@import url(./navigation.css);
 
 :root {
   --color1: #56b280;
   --color2: #272727;
   --color3: white;
-}
-
-.main-nav {
-  /* nav/desktop */
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75px;
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  background: #ffffff;
-  align-items: center;
-  text-align: center;
-  z-index: 1;
-}
-
-.main-nav-items {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  margin: auto;
-}
-
-.main-nav-item {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #272727;
-  margin: 0 20px;
-}
-
-.main-nav-item a {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 20px;
-  text-decoration: none;
-  color: black;
-}
-
-.main-nav-item a:hover {
-  padding: 20px;
-  background-color: rgb(231, 231, 231);
-  transform: scale(1.2);
-}
-
-.right-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.right-menu img {
-  margin: 10px;
-}
-
-.right-menu img:hover {
-  transform: scale(1.5);
-}
-
-.brand {
-  width: 126px;
-  height: 34px;
-  background-image: url(../images/logo.svg);
-  background-position: cover;
-}
-
-.brand:hover {
-  transform: scale(1.2);
-}
-
-.profile {
-  /* Profile */
-
-  width: 34px;
-  height: 34px;
-}
-
-.cart {
-  /* Cart */
-
-  width: 26px;
-  height: 26px;
 }
 
 .header {
@@ -260,4 +174,8 @@ footer {
   padding: 0 165px;
   background-color: lightgrey;
   color: #5e6e89;
+}
+
+.none {
+  display: none;
 }
