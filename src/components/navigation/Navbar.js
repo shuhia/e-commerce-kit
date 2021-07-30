@@ -6,6 +6,7 @@ import menu from "../../images/menu.svg";
 import clearMenu from "../../images/clear-menu.svg";
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { auto } from "@popperjs/core";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -34,8 +35,14 @@ function Navbar() {
   return (
     <nav className="main-nav">
       {onMobile && (
-        <span style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+        <span
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+          }}
+        >
           <span
+            style={{ margin: "auto 0" }}
             onClick={() => {
               setShowMenu((prev) => !prev);
             }}
