@@ -21,7 +21,7 @@ function Footer(props) {
               return (
                 <>
                   <ul key={index}>
-                    <h1>{list.name}</h1>
+                    <h3>{list.name}</h3>
 
                     {list.links.map((item, index) => {
                       return (
@@ -39,6 +39,7 @@ function Footer(props) {
       </footer>
       <div className="copyright">
         <a href="#copyright">©Candleaf All Rights Reserved.</a>
+        <a href="#"> Implemented by Alex On</a>
       </div>
     </div>
   );

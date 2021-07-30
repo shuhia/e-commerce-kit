@@ -6,6 +6,7 @@
   --color1: #56b280;
   --color2: #272727;
   --color3: white;
+  --mobile: 800px;
 }
 
 .header {
@@ -104,49 +105,58 @@
 }
 
 footer {
-  position: relative;
+  display: flex;
   max-width: 100%;
-  height: 460px;
+  min-height: 460px;
   background-color: #272727;
-  padding: 60px 165px;
-
   color: white;
 }
 
 .footer-widgets {
+  flex: 1 1 1440px;
   display: flex;
   border-top: 2px solid white;
+  max-width: 1440px;
   padding: 16px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 .footer-widgets aside {
   flex: 1;
   display: flex;
+  padding: 10px;
 }
 
 .footer-widgets aside div {
-  flex: 0 1;
+  display: block;
+}
+
+.footer-widgets aside div p {
+  padding: 10px 0;
 }
 
 .footer-widgets aside div img {
-  height: 100px;
+  max-height: 250px;
 }
 
 .footer-widgets div {
-  flex: 1;
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  padding: 10px;
 }
-.footer-widgets div h1 {
+.footer-widgets div h3 {
   color: #56b280;
   text-transform: capitalize;
+  width: 168.84px;
 }
 .footer-widgets div ul {
   flex: 1;
   list-style: none;
   margin: 0;
   padding: 0;
+  max-width: 164px;
+  padding: 10px;
 }
 
 .footer-widgets div ul li {
@@ -154,6 +164,7 @@ footer {
   text-decoration: none;
   text-transform: capitalize;
   padding: 15px 0;
+  width: 168.84px;
 }
 
 .footer-widgets div ul li a {
@@ -166,12 +177,13 @@ footer {
 .copyright {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   bottom: 0;
   left: 0;
   max-width: 100%;
-  height: 76px;
-  padding: 0 165px;
+  min-height: 76px;
+  padding: 0 10%;
   background-color: lightgrey;
   color: #5e6e89;
 }

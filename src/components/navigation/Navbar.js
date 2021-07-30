@@ -60,10 +60,10 @@ function Navbar() {
 
   return (
     <nav className="main-nav">
-      {onMobile && { navMobile }}
+      {onMobile && navMobile}
       <ul className="main-nav-ul">
         {onMobile && showMenu && <>{navItems}</>}
-        {!onMobile && { navDesktop }}
+        {!onMobile && navDesktop}
       </ul>
     </nav>
   );
