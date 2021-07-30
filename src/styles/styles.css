@@ -18,8 +18,9 @@
   top: 0px;
   background: url(../images/bg-image.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
+  background-size: auto;
+  background-clip: border-box;
+  background-position: center;
   justify-content: center;
   align-items: center;
 }

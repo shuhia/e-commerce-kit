@@ -1,6 +1,6 @@
 import "./styles/styles.css";
 import Navbar from "./components/navigation/Navbar";
-import Header from "./components/Heading";
+import Header from "./components/Header";
 import Section from "./components/Section";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./pages/Test";

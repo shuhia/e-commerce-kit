@@ -12,7 +12,7 @@ function Footer(props) {
             <div>
               <img src={footerLogo} alt="footer logo" />
               <p>
-                Your natural cnadle made for your home and for your wellness.
+                Your natural candle made for your home and for your wellness.
               </p>
             </div>
           </aside>

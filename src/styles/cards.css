@@ -3,8 +3,9 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  width: 730px;
+  max-width: 730px;
   min-height: 349px;
+  margin: 0 15px;
   background: rgba(247, 248, 250, 0.8);
   backdrop-filter: blur(12px);
   /* Note: backdrop-filter has minimal browser support */
@@ -34,7 +35,7 @@
 .background-card-link {
   /* green */
   display: flex;
-  width: 310px;
+  max-width: 310px;
   height: 40px;
   color: white;
   background: #56b280;
