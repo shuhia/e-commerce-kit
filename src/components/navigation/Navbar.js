@@ -6,7 +6,6 @@ import menu from "../../images/menu.svg";
 import clearMenu from "../../images/clear-menu.svg";
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import { auto } from "@popperjs/core";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -53,7 +52,9 @@ function Navbar() {
 
   const navDesktop = (
     <>
-      <img className="logo" src={logo}></img>
+      <NavItem>
+        <img className="logo" src={logo}></img>
+      </NavItem>
       {navItems}
     </>
   );
