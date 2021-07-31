@@ -29,7 +29,9 @@ section header h1 {
 
 #section-testimonials {
   background-color: rgba(86, 178, 128, 0.1);
-  overflow: scroll;
+  min-height: 100%;
+  padding: 5%;
+  flex-direction: column;
 }
 
 #section-products {

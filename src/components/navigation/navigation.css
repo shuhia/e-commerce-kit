@@ -38,7 +38,7 @@
 }
 
 .main-nav-item a:hover {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(90, 71, 71);
   transform: scale(1.2);
 }
 
@@ -69,11 +69,4 @@
     background-color: rgb(231, 231, 231);
     transform: none;
   }
-}
-
-.profile {
-  /* Profile */
-
-  width: 34px;
-  height: 34px;
 }

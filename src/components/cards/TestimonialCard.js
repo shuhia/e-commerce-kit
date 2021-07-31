@@ -1,16 +1,26 @@
 import React from "react";
-import "./cards.css";
-const styles = { container: { display: "flex", flexFlow: "row wrap" } };
+import Profile from "../Profile";
+import Rating from "../Rating";
+import styles from "./card.module.css";
 
-const TestimonialCard = () => {
+const TestimonialCard = ({
+  image,
+  rating = 5,
+  comment = "“I love it! No more air fresheners”",
+  name = "Luisa",
+}) => {
   return (
-    <div styles={styles.container}>
-      <div></div>
-      <div className="rating">
-        <span></span>
+    <div className={styles.container}>
+      <div className={styles.image}>
+        <Profile></Profile>
       </div>
-      <div className="comment"></div>
-      <div className="name"></div>
+      <div className={styles.rating}>
+        <Rating rating={rating}></Rating>
+      </div>
+      <div className={styles.comment}>
+        <b>{comment}</b>
+      </div>
+      <div className={styles.name}>{name}</div>
     </div>
   );
 };

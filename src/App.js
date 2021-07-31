@@ -13,11 +13,17 @@ import About from "./pages/About";
 
 const discover = {
   name: "discover",
+
   links: ["New season", "Most searched", "Most selled"],
 };
-const about = { name: "about", links: ["Help", "Shipping", "Affilliate"] };
+const about = {
+  name: "about",
+
+  links: ["Help", "Shipping", "Affilliate"],
+};
 const info = {
   name: "info",
+
   links: ["Contact us", "Privacy Policies", "Terms & Conditions"],
 };
 

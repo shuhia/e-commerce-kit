@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 322px;
+  min-width: 350px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 15px;
+}
+
+.comment {
+  max-width: 250px;
+  max-height: 80px;
+  padding: 15px;
+}

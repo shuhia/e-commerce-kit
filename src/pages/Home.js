@@ -10,6 +10,7 @@ import candlesImage from "../images/candles.png";
 import Button from "../components/buttons/Button";
 
 import testmonialImage from "../images/cards-testimonial.png";
+import TestimonialCard from "../components/cards/TestimonialCard";
 
 function Home() {
   return (
@@ -67,14 +68,18 @@ function Home() {
           className="carusell"
           style={{
             display: "flex",
+
             width: "100%",
-            height: 245,
-            overflow: "scroll",
+            overflowX: "scroll",
+            overflowY: "none",
           }}
         >
-          <img src={testmonialImage}></img>
-          <img src={testmonialImage}></img>
-          <img src={testmonialImage}></img>
+          <TestimonialCard></TestimonialCard>
+          <TestimonialCard></TestimonialCard>
+          <TestimonialCard></TestimonialCard>
+          <TestimonialCard></TestimonialCard>
+          <TestimonialCard></TestimonialCard>
+          <TestimonialCard></TestimonialCard>
         </div>
       </Section>
     </>

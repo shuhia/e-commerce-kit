@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { ReactComponent as Star } from "../images/star_black_24dp.svg";
+import { ReactComponent as StarBorder } from "../images/star_border_black_24dp.svg";
 
-function rating(props) {
+function Rating(props) {
+  const { rating, maxRating = 5, color = "black" } = props;
+  const constructRatingBar = (maxRating = 5, currentRating = 0) => {
+    const nrEmptyStars = maxRating - currentRating;
+    const ratingBar = Array(currentRating)
+      .fill(<Star fill={color}></Star>)
+      .concat(Array(nrEmptyStars).fill(<StarBorder fill={color}></StarBorder>));
+    return ratingBar;
+  };
   return (
     <div className="rating">
-      <span></span>
+      <span>{constructRatingBar(maxRating, rating)}</span>
     </div>
   );
 }
 
-export default rating;
+export default Rating;
