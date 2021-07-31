@@ -1,5 +1,5 @@
 import React from "react";
-import ".cards.css";
+import "./cards.css";
 const styles = { container: { display: "flex", flexFlow: "row wrap" } };
 
 const TestimonialCard = () => {

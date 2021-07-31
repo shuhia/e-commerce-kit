@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import ".cards.css";
+import "./cards.css";
 import { useHistory } from "react-router-dom";
 
 function ProductCard(props) {

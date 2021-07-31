@@ -1,5 +1,5 @@
 import React from "react";
-import ",/buttons.css";
+import "./buttons.css";
 
 function BigButton(props) {
   const { name = "Button", href = "#products" } = props;

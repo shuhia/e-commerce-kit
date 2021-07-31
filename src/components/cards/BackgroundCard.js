@@ -1,5 +1,5 @@
 import React from "react";
-import ".cards.css";
+import "./cards.css";
 import BigButton from "../buttons/BigButton";
 
 function BackgroundCard() {
