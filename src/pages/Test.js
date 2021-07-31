@@ -8,6 +8,7 @@ import Cart from "../components/business/Cart";
 import Rating from "../components/Rating";
 import Profile from "../components/Profile";
 import TestimonialCard from "../components/cards/TestimonialCard";
+import Form from "../components/Form";
 
 function Test() {
   return (
@@ -31,6 +32,9 @@ function Test() {
         <TestimonialCard></TestimonialCard>
         <Rating></Rating>
         <Profile></Profile>
+      </Section>
+      <Section title="order">
+        <Form></Form>
       </Section>
     </>
   );

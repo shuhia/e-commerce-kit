@@ -82,6 +82,18 @@ function Home() {
           <TestimonialCard></TestimonialCard>
         </div>
       </Section>
+      <Section
+        id="popular"
+        title="Popular"
+        description="Our top selling product that you may like"
+      >
+        <Cards>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+          <ProductCard title="test" img={product}></ProductCard>
+        </Cards>
+      </Section>
     </>
   );
 }

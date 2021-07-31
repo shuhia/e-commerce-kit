@@ -3,7 +3,12 @@ import React from "react";
 import "./section.css";
 
 function Section(props) {
-  const { id = "", title = "title", description = "description" } = props;
+  const {
+    id = "",
+    title = "title",
+    description = "description",
+    content,
+  } = props;
   return (
     <section id={"section-" + id}>
       <a href="#test" id={id}></a>
@@ -11,7 +16,8 @@ function Section(props) {
         <h1>{title}</h1>
         <p>{description}</p>
       </header>
-      <div className="section-content"></div>
+      <div className="section-content">{content}</div>
+
       {props.children}
     </section>
   );
