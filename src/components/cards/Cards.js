@@ -1,4 +1,5 @@
 import React from "react";
+import ".cards.css";
 
 function Cards(props) {
   const { title, description } = props;

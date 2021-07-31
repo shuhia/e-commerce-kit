@@ -6,7 +6,7 @@
 
 .cart {
   position: relative;
-  width: 23px;
+  min-width: 23px;
   height: 23px;
 }
 
