@@ -1,4 +1,4 @@
-.button {
+.small {
   /* green */
   display: flex;
   width: 150px;
@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.button span {
+.small span {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -19,7 +19,7 @@
   text-align: center;
 }
 
-.button:hover {
+.small:hover {
   background-color: var(--color3);
   color: var(--color1);
   border: 1px var(--color1) solid;
@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-.big-button {
+.big {
   background-color: var(--color1);
   color: var(--color3);
   width: 350px;
@@ -39,7 +39,7 @@
   border: 1px var(--color1) solid;
 }
 
-.big-button span {
+.big span {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -49,10 +49,13 @@
   text-align: center;
 }
 
-.big-button:hover {
+.big:hover {
   background-color: var(--color3);
   color: var(--color1);
   border: 1px var(--color1) solid;
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.icon {
 }
