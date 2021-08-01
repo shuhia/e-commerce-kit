@@ -11,6 +11,7 @@ import Breadcrumb from "../components/business/Breadcrumb";
 import Details from "./Details";
 import Shipping from "./Shipping";
 import Payment from "./Payment";
+import Cart from "./Cart";
 
 function Checkout() {
   let { path, url } = useRouteMatch();
@@ -26,7 +27,10 @@ function Checkout() {
     <Router>
       <Breadcrumb pages={pages}></Breadcrumb>
       <Switch>
-        <Route exact path={path}>
+        <Route exact path="/cart">
+          <Cart></Cart>
+        </Route>
+        <Route exact path={path + "/details"}>
           <Details></Details>
         </Route>
         <Route exact path={path + "/shipping"}>

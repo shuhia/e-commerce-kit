@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import styles from "./dropdown.module.css";
 import arrow from "../../images/keyboard_arrow_down_black_24dp.svg";
 
-function Dropdown() {
+function Dropdown({ size = "big", label = "label" }) {
   const [show, setShow] = useState(false);
   const dropdown = useRef();
   const options = ["test1", "test2", "test3"];
@@ -19,10 +19,10 @@ function Dropdown() {
   }, []);
 
   return (
-    <div className={styles.small} ref={dropdown}>
+    <div className={styles[size]} ref={dropdown}>
       <div className={styles.selector} onClick={() => setShow((prev) => !prev)}>
-        <div>
-          <span className={styles.label}>Label</span>
+        <div className={styles.selectorField}>
+          <span className={styles.label}>{label}</span>
           <span className={styles.selected}>{selected}</span>
         </div>
 

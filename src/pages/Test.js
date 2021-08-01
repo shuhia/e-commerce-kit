@@ -51,7 +51,9 @@ function Test() {
           <Input size="medium"></Input>
           <Input size="large"></Input>
         </div>
-        <Dropdown></Dropdown>
+        <Dropdown size="small" label="small"></Dropdown>
+        <Dropdown size="mobile" label="mobile"></Dropdown>
+        <Dropdown size="large" label="large"></Dropdown>
       </Section>
     </>
   );

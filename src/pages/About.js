@@ -7,7 +7,9 @@ function About() {
       <Section
         title="about"
         description="This webpage was built from scratch with react and figma."
-      ></Section>
+      >
+        Rules: All clickable items should have a hover effect
+      </Section>
     </div>
   );
 }

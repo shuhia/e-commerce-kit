@@ -1,9 +1,12 @@
 import React from "react";
 import footerLogo from "../images/footer-logo.png";
 import { Link } from "react-router-dom";
+import styles from "./footer.module.css";
+import { useHistory } from "react-router";
 
 function Footer(props) {
   const { lists } = props;
+  const history = useHistory();
 
   return (
     <div>
@@ -11,7 +14,14 @@ function Footer(props) {
         <div className="footer-widgets">
           <aside>
             <div>
-              <img src={footerLogo} alt="footer logo" />
+              <img
+                src={footerLogo}
+                alt="footer logo"
+                onClick={() => {
+                  history.push("/");
+                  window.scrollTo(0, 0);
+                }}
+              />
               <p>
                 Your natural candle made for your home and for your wellness.
               </p>
@@ -22,12 +32,15 @@ function Footer(props) {
               return (
                 <>
                   <ul key={"ul" + index}>
-                    <h3 key={"h3" + index}>{list.name}</h3>
+                    <Link key={"link-" + index} to={list.name}>
+                      <h3 key={"h3" + index}>{list.name}</h3>
+                    </Link>
 
                     {list.links.map((name, index) => {
                       return (
                         <li key={"listItem-" + index}>
                           <Link
+                            className={styles.link}
                             key={"link-" + index}
                             to={"/" + name.replaceAll(" ", "").toLowerCase()}
                           >
