@@ -14,10 +14,15 @@ import Input from "../components/business/Input";
 import Dropdown from "../components/business/Dropdown";
 import Coupon from "../components/business/Coupon";
 import Subscription from "../components/business/Subscription";
+import { NavbarDesktop, NavbarMobile } from "../components/navigation/Navbar";
 
 function Components() {
   return (
     <>
+      <Section title="Navigation">
+        <NavbarDesktop></NavbarDesktop>
+        <NavbarMobile></NavbarMobile>
+      </Section>
       <Section title="Cards">
         <Quantity></Quantity>
 

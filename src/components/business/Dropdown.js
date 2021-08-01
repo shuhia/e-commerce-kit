@@ -5,7 +5,7 @@ import arrow from "../../images/keyboard_arrow_down_black_24dp.svg";
 function Dropdown({ size = "big", label = "label" }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
-  const dropdown = useRef();
+
   const options = ["test1", "test2", "test3"];
   const [selected, setSelected] = useState("province");
   function select(e) {
@@ -16,7 +16,6 @@ function Dropdown({ size = "big", label = "label" }) {
   return (
     <div
       className={styles[size]}
-      ref={dropdown}
       onMouseEnter={(e) => setActive(true)}
       onMouseLeave={(e) => {
         setActive(false);

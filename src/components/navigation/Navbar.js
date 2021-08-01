@@ -3,11 +3,14 @@ import React from "react";
 import NavItem from "./NavItem";
 import logo from "../../images/logo.svg";
 import menu from "../../images/menu.svg";
-import clearMenu from "../../images/clear-menu.svg";
+import closeMenu from "../../images/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import CartItem from "../business/CartItem";
 import "./navigation.css";
+import styles from "./navbar.module.css";
+
+// Create two navs. One for mobile and one for desktop
 
 function Navbar({ navItems }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -33,7 +36,7 @@ function Navbar({ navItems }) {
           setShowMenu((prev) => !prev);
         }}
       >
-        {!showMenu ? <img src={menu}></img> : <img src={clearMenu}></img>}
+        {!showMenu ? <img src={menu}></img> : <img src={closeMenu}></img>}
       </span>
       <img style={{ margin: "auto" }} className="logo" src={logo}></img>
     </span>
@@ -60,3 +63,53 @@ function Navbar({ navItems }) {
 }
 
 export default Navbar;
+
+function NavbarDesktop({
+  items = (
+    <>
+      <NavItem>
+        <img className="logo" src={logo}></img>
+      </NavItem>
+      <NavItem name="Discover" href="/discover"></NavItem>
+      <NavItem name="About" href="/about"></NavItem>
+      <NavItem name="Contact" href="/contact"></NavItem>
+      <NavItem name="Components" href="/components"></NavItem>
+    </>
+  ),
+}) {
+  return (
+    <nav className={styles.container}>
+      NavbarDesktop
+      <ul className={styles.desktopItems}>{items}</ul>
+    </nav>
+  );
+}
+
+function NavbarMobile({
+  items = (
+    <>
+      <NavItem name="Discover" href="/discover"></NavItem>
+      <NavItem name="About" href="/about"></NavItem>
+      <NavItem name="Contact" href="/contact"></NavItem>
+      <NavItem name="Components" href="/components"></NavItem>
+    </>
+  ),
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <nav className={styles.container} onMouseLeave={() => setOpen(false)}>
+      <div className={styles.mobileMenu}>
+        {!open ? (
+          <img src={menu} onClick={(e) => setOpen(true)}></img>
+        ) : (
+          <img src={closeMenu} onClick={(e) => setOpen(false)}></img>
+        )}
+        <img className="logo" src={logo}></img>
+      </div>
+
+      {open && <ul className={styles.mobileItems}>{items}</ul>}
+    </nav>
+  );
+}
+
+export { NavbarDesktop, NavbarMobile };
