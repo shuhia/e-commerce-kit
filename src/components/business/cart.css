@@ -5,6 +5,7 @@
 }
 
 .cart {
+  display: block;
   position: relative;
   min-width: 23px;
   height: 23px;

@@ -7,69 +7,29 @@ import closeMenu from "../../images/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import CartItem from "../business/CartItem";
-import "./navigation.css";
+
 import styles from "./navbar.module.css";
 
-// Create two navs. One for mobile and one for desktop
-
 function Navbar({ navItems }) {
-  const [showMenu, setShowMenu] = useState(false);
   const onMobile = useMediaQuery({ query: "(max-width:800px)" });
-  const isFocusNavbar = useRef();
   // Reset toggle
-  useEffect(() => {
-    if (!onMobile) {
-      setShowMenu(false);
-    }
-  }, [onMobile]);
-
-  const navMobile = (
-    <span
-      style={{
-        display: "grid",
-        gridTemplateColumns: "auto auto auto",
-        alignItems: "center",
-      }}
-    >
-      <span
-        onClick={() => {
-          setShowMenu((prev) => !prev);
-        }}
-      >
-        {!showMenu ? <img src={menu}></img> : <img src={closeMenu}></img>}
-      </span>
-      <img style={{ margin: "auto" }} className="logo" src={logo}></img>
-    </span>
-  );
-
-  const navDesktop = (
-    <>
-      <NavItem>
-        <img className="logo" src={logo}></img>
-      </NavItem>
-      {navItems}
-    </>
-  );
 
   return (
-    <nav className="main-nav" ref={isFocusNavbar}>
-      {onMobile && navMobile}
-      <ul className="main-nav-ul">
-        {onMobile && showMenu && <>{navItems}</>}
-        {!onMobile && navDesktop}
-      </ul>
-    </nav>
+    <>
+      {onMobile ? (
+        <NavbarMobile navItems={navItems}></NavbarMobile>
+      ) : (
+        <NavbarDesktop navItems={navItems}></NavbarDesktop>
+      )}
+    </>
   );
 }
 
 export default Navbar;
 
 function NavbarDesktop({
-  items = (
+  navItems = (
     <>
-      <NavItem>
-        <img className="logo" src={logo}></img>
-      </NavItem>
       <NavItem name="Discover" href="/discover"></NavItem>
       <NavItem name="About" href="/about"></NavItem>
       <NavItem name="Contact" href="/contact"></NavItem>
@@ -79,14 +39,18 @@ function NavbarDesktop({
 }) {
   return (
     <nav className={styles.container}>
-      NavbarDesktop
-      <ul className={styles.desktopItems}>{items}</ul>
+      <ul className={styles.desktopItems}>
+        <NavItem>
+          <img className="logo" src={logo}></img>
+        </NavItem>
+        {navItems}
+      </ul>
     </nav>
   );
 }
 
 function NavbarMobile({
-  items = (
+  navItems = (
     <>
       <NavItem name="Discover" href="/discover"></NavItem>
       <NavItem name="About" href="/about"></NavItem>
@@ -107,7 +71,7 @@ function NavbarMobile({
         <img className="logo" src={logo}></img>
       </div>
 
-      {open && <ul className={styles.mobileItems}>{items}</ul>}
+      {open && <ul className={styles.mobileItems}>{navItems}</ul>}
     </nav>
   );
 }
