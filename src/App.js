@@ -6,10 +6,13 @@ import Test from "./pages/Test";
 
 import Footer from "./components/Footer";
 import NavItem from "./components/navigation/NavItem";
-import Cart from "./components/business/Cart";
+import CartItem from "./components/business/CartItem";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Product from "./pages/Product";
+import Checkout from "./pages/Checkout";
+import Cart from "./pages/Cart";
 
 const discover = {
   name: "discover",
@@ -36,25 +39,31 @@ function App() {
         <Navbar
           navItems={
             <>
-              <NavItem name="Discover"></NavItem>
+              <NavItem name="Discover" href="/discover"></NavItem>
               <NavItem name="About" href="/about"></NavItem>
-              <NavItem name="Contact us"></NavItem>
+              <NavItem name="Contact" href="/contact"></NavItem>
               <NavItem name="Test" href="/test"></NavItem>
-              <NavItem>
+              <NavItem href="/profile">
                 <img className="profile" src="./profile.svg"></img>
               </NavItem>
 
-              <NavItem>
-                <Cart></Cart>
+              <NavItem href="/cart">
+                <CartItem></CartItem>
               </NavItem>
             </>
           }
         ></Navbar>
-
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/product">
+            <Product></Product>
+          </Route>
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/checkout">
+            <Checkout></Checkout>
+          </Route>
           <Route exact path="/test" component={Test}></Route>
           <Route exact path="/about" component={About}></Route>
+          <Route exact path="/" component={Home} />
         </Switch>
         <Footer lists={lists}></Footer>
       </Router>

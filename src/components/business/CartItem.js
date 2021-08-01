@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import cartSvg from "../../images/cart.svg";
 import "./cart.css";
 
-function Cart(props) {
+function CartItem(props) {
   const [count, setCount] = useState(0);
   return (
     <span className="cart">
@@ -12,4 +12,4 @@ function Cart(props) {
   );
 }
 
-export default Cart;
+export default CartItem;

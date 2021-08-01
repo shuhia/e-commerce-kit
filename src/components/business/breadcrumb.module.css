@@ -1,0 +1,22 @@
+.breadcrumb {
+  padding: 8px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: ">\00a0";
+}
+
+.breadcrumb li a {
+  color: black;
+}
+
+.breadcrumb li a:link {
+  text-decoration: none;
+}

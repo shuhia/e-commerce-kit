@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 function ProductCard(props) {
   const history = useHistory();
-  const { title, img, price, link = "/" } = props;
+  const { title, img, price, link = "/Product" } = props;
   return (
     <div className="product-card" onClick={() => history.push(link)}>
       <img src={img} alt={title} />{" "}

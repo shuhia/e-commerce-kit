@@ -6,7 +6,7 @@ import menu from "../../images/menu.svg";
 import clearMenu from "../../images/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-import Cart from "../business/Cart";
+import CartItem from "../business/CartItem";
 import "./navigation.css";
 
 function Navbar({ navItems }) {

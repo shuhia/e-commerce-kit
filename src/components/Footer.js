@@ -1,5 +1,6 @@
 import React from "react";
 import footerLogo from "../images/footer-logo.png";
+import { Link } from "react-router-dom";
 
 function Footer(props) {
   const { lists } = props;
@@ -20,13 +21,18 @@ function Footer(props) {
             {lists.map((list, index) => {
               return (
                 <>
-                  <ul key={index}>
-                    <h3>{list.name}</h3>
+                  <ul key={"ul" + index}>
+                    <h3 key={"h3" + index}>{list.name}</h3>
 
-                    {list.links.map((item, index) => {
+                    {list.links.map((name, index) => {
                       return (
-                        <li>
-                          <a href="#home">{item}</a>
+                        <li key={"listItem-" + index}>
+                          <Link
+                            key={"link-" + index}
+                            to={"/" + name.replaceAll(" ", "").toLowerCase()}
+                          >
+                            {name}
+                          </Link>
                         </li>
                       );
                     })}
