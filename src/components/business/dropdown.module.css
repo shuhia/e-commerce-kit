@@ -1,3 +1,17 @@
+.large {
+  position: relative;
+  width: 445px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.medium {
+  position: relative;
+  width: 216px;
+  height: 40px;
+  border: 1px solid black;
+}
+
 .small {
   position: relative;
   width: 140px;
@@ -8,13 +22,6 @@
 .mobile {
   position: relative;
   width: 347px;
-  height: 40px;
-  border: 1px solid black;
-}
-
-.large {
-  position: relative;
-  width: 445px;
   height: 40px;
   border: 1px solid black;
 }

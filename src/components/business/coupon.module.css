@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+.container input {
+  height: 40px;
+}
+
+.container :last-child {
+  color: white;
+  background: grey;
+  border: 1px;
+  border-radius: 4px;
+  width: 116px;
+}
+
+.container :last-child:active {
+  color: grey;
+  background: white;
+}

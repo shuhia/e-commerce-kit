@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  width: 350px;
+  height: 158px;
+}
+
+.subscribe {
+  width: 350px;
+  height: 117px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.subscribe input {
+  padding: 0 4px;
+}
+
+.subscribe label {
+}

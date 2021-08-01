@@ -12,8 +12,10 @@ import Form from "../components/Form";
 import Breadcrumb from "../components/business/Breadcrumb";
 import Input from "../components/business/Input";
 import Dropdown from "../components/business/Dropdown";
+import Coupon from "../components/business/Coupon";
+import Subscription from "../components/business/Subscription";
 
-function Test() {
+function Components() {
   return (
     <>
       <Section title="Cards">
@@ -51,12 +53,24 @@ function Test() {
           <Input size="medium"></Input>
           <Input size="large"></Input>
         </div>
-        <Dropdown size="small" label="small"></Dropdown>
-        <Dropdown size="mobile" label="mobile"></Dropdown>
-        <Dropdown size="large" label="large"></Dropdown>
+
+        <div>
+          Dropdowns
+          <Dropdown size="small" label="small"></Dropdown>
+          <Dropdown size="mobile" label="mobile"></Dropdown>
+          <Dropdown size="large" label="large"></Dropdown>
+        </div>
+        <div>
+          Coupon
+          <Coupon></Coupon>
+        </div>
+        <div>
+          Subscription
+          <Subscription></Subscription>
+        </div>
       </Section>
     </>
   );
 }
 
-export default Test;
+export default Components;
