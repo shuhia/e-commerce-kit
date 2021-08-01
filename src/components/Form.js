@@ -2,7 +2,7 @@ import React from "react";
 import Quantity from "./business/Quantity";
 import productImg from "../images/product-1.png";
 import BigButton from "./buttons/BigButton";
-
+import { ReactComponent as Cart } from "../images/cart.svg";
 function Form({
   price = 0,
   currency = "$",
@@ -33,7 +33,9 @@ function Form({
           The discount will be applied at checkout. See details
         </p>
       </div>
-      <BigButton></BigButton>
+      <BigButton name="Add to cart" img={<Cart></Cart>}>
+        {" "}
+      </BigButton>
       <div>
         <p>Facts</p>
         <ul></ul>

@@ -13,6 +13,7 @@ import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import Cart from "./pages/Cart";
 import Components from "./pages/Components";
+import Discover from "./pages/Discover";
 
 const discover = {
   name: "discover",
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/product">
             <Product></Product>
           </Route>
+          <Route exact path="/discover" component={Discover}></Route>
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/checkout">
             <Checkout></Checkout>

@@ -1,5 +1,6 @@
 .small {
   /* green */
+  position: relative;
   display: flex;
   width: 150px;
   height: 40px;
@@ -9,6 +10,7 @@
 }
 
 .small span {
+  position: relative;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -28,6 +30,7 @@
 }
 
 .big {
+  position: relative;
   background-color: var(--color1);
   color: var(--color3);
   width: 350px;
@@ -58,4 +61,9 @@
 }
 
 .icon {
+  position: absolute;
+  left: 28.22%;
+  right: 64.89%;
+  top: 19.05%;
+  bottom: 23.81%;
 }

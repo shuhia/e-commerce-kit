@@ -3,24 +3,32 @@ import styles from "./dropdown.module.css";
 import arrow from "../../images/keyboard_arrow_down_black_24dp.svg";
 
 function Dropdown({ size = "big", label = "label" }) {
-  const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(false);
   const dropdown = useRef();
   const options = ["test1", "test2", "test3"];
   const [selected, setSelected] = useState("province");
   function select(e) {
     setSelected(options[e.target.id]);
-    setShow(false);
+    setOpen(false);
   }
 
-  useEffect(() => {
-    window.addEventListener("click", (e) => {
-      console.log(e.target);
-    });
-  }, []);
-
   return (
-    <div className={styles[size]} ref={dropdown}>
-      <div className={styles.selector} onClick={() => setShow((prev) => !prev)}>
+    <div
+      className={styles[size]}
+      ref={dropdown}
+      onMouseEnter={(e) => setActive(true)}
+      onMouseLeave={(e) => {
+        setActive(false);
+        setOpen(false);
+      }}
+    >
+      <div
+        className={styles.selector}
+        onClick={() => {
+          if (active) setOpen((prev) => !prev);
+        }}
+      >
         <div className={styles.selectorField}>
           <span className={styles.label}>{label}</span>
           <span className={styles.selected}>{selected}</span>
@@ -31,7 +39,7 @@ function Dropdown({ size = "big", label = "label" }) {
         </div>
       </div>
 
-      {show && (
+      {open && (
         <ul className={styles.select}>
           {options.map((option, index) => {
             return (
