@@ -1,0 +1,42 @@
+.container {
+}
+
+.table {
+}
+
+.product {
+  display: flex;
+  min-width: 635px;
+  height: 134px;
+  margin: 30px;
+}
+
+.remove:hover {
+  cursor: default;
+  color: red;
+}
+.price {
+  min-width: 160px;
+}
+
+.quantity {
+  min-width: 96px;
+}
+
+.total {
+  min-width: 93px;
+}
+
+.table tbody tr {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.subtotal {
+  padding-right: 70px;
+  text-align: right;
+}
+
+.table tfoot td {
+  height: 100px;
+}

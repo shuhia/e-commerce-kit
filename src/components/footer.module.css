@@ -1,3 +1,93 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 460px;
+  background-color: #272727;
+  color: white;
+}
+
+.inner {
+  padding: 60px 0;
+}
+
 .link:hover {
   color: silver;
+}
+.widgets {
+  flex: 1 1 1440px;
+  display: flex;
+  border-top: 2px solid white;
+  max-width: 1440px;
+  padding: 16px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.widgets aside {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+}
+
+.widgets aside div {
+  display: block;
+}
+
+.widgets aside div p {
+  padding: 10px 0;
+}
+
+.widgets aside div img {
+  max-height: 250px;
+}
+
+.widgets div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.widgets div h3 {
+  color: #56b280;
+  text-transform: capitalize;
+  width: 168.84px;
+}
+.widgets div ul {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 164px;
+  padding: 10px;
+}
+
+.widgets div ul li {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 15px 0;
+  width: 168.84px;
+}
+
+.widgets div ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 15px 0;
+}
+
+.copyright {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 76px;
+  padding: 0 10%;
+  background-color: lightgrey;
+  color: #5e6e89;
 }

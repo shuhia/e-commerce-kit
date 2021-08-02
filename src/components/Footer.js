@@ -9,9 +9,9 @@ function Footer(props) {
   const history = useHistory();
 
   return (
-    <div>
-      <footer>
-        <div className="footer-widgets">
+    <footer className={styles.container}>
+      <div className={styles.inner}>
+        <div className={styles.widgets}>
           <aside>
             <div>
               <img
@@ -55,14 +55,14 @@ function Footer(props) {
             })}
           </div>
         </div>
-      </footer>
-      <div className="copyright">
+      </div>
+      <div className={styles.copyright}>
         <a href="#copyright">©Candleaf All Rights Reserved.</a>
         <a href="https://github.com/shuhia/e-commerce-kit">
           Implemented by Alex On
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
 

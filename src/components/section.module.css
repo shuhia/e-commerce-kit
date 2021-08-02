@@ -1,0 +1,8 @@
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: flex;
+  flex-flow: column;
+}

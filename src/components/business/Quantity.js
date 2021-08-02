@@ -1,7 +1,9 @@
 import React from "react";
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
+import "./quantity.css";
 
-function Quantity() {
+function Quantity(props) {
+  const { value = 0, setValue = () => {} } = props;
   const setCount = (state, action) => {
     const { type, payload } = action;
     switch (type) {
@@ -16,11 +18,13 @@ function Quantity() {
         return state;
     }
   };
-  const [count, dispatch] = useReducer(setCount, 0);
+
+  const [count, dispatch] = useReducer(setCount, value);
+
+  useEffect(() => setValue(count), [count, setValue]);
 
   return (
     <div className="quantity">
-      <div className="quantity-title">Quantity</div>
       <div
         className="quantity-controller"
         style={{

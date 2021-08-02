@@ -1,0 +1,30 @@
+.quantity {
+  display: flex;
+  max-height: 61px;
+  max-width: 200px;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: 1px solid var(--color1);
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-value {
+  max-width: 4ch;
+  text-align: center;
+  border: none;
+}
+
+.quantity-controller {
+  min-width: 3ch;
+
+  text-align: center;
+  display: flex;
+}
+
+.quantity-controller button {
+  background-color: white;
+  color: green;
+  border: 0;
+}

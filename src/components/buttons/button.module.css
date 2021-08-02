@@ -1,3 +1,8 @@
+.small,
+.big {
+  text-decoration: none;
+}
+
 .small {
   /* green */
   position: relative;
