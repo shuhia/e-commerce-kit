@@ -10,7 +10,15 @@ function Form({
   options,
   title = "Spiced Mint Candleaf®",
   img = productImg,
+  setData,
 }) {
+  function handleSubmit(e) {
+    // get form data
+    const data = "";
+    // Send form data
+    
+  }
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <div className="title">{title}</div>
@@ -33,9 +41,7 @@ function Form({
           The discount will be applied at checkout. See details
         </p>
       </div>
-      <BigButton name="Add to cart" img={<Cart></Cart>}>
-        {" "}
-      </BigButton>
+      <BigButton name="Add to cart" href="#" img={<Cart></Cart>}></BigButton>
       <div>
         <p>Facts</p>
         <ul></ul>

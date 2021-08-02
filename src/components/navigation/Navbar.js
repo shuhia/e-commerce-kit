@@ -27,6 +27,10 @@ function Navbar({ navItems }) {
 
 export default Navbar;
 
+function NavItems({ items }) {
+  return { items };
+}
+
 function NavbarDesktop({
   navItems = (
     <>
@@ -60,11 +64,40 @@ function NavbarMobile({
   ),
 }) {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    console.log("useeffect");
+    if (open) {
+      window.addEventListener("click", handleClick);
+
+      return () => {
+        window.removeEventListener("click", handleClick);
+      };
+    }
+  }, [active]);
+
+  function handleClick() {
+    console.log(active);
+    if (!active) {
+      setOpen(false);
+    }
+  }
+
   return (
-    <nav className={styles.container} onMouseLeave={() => setOpen(false)}>
+    <nav
+      className={styles.container}
+      onMouseEnter={(e) => {
+        setActive(true);
+        console.log("entered");
+      }}
+      onMouseLeave={(e) => {
+        setActive(false);
+        console.log("leaved");
+      }}
+    >
       <div className={styles.mobileMenu}>
         {!open ? (
-          <img src={menu} onClick={(e) => setOpen(true)}></img>
+          <img src={menu} onMouseEnter={(e) => setOpen(true)}></img>
         ) : (
           <img src={closeMenu} onClick={(e) => setOpen(false)}></img>
         )}
