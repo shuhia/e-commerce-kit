@@ -8,15 +8,18 @@
 }
 
 .container li {
+  display: flex;
 }
 
 .container a {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 44px;
   padding: 5px;
+  min-width: 50%;
+  text-align: center;
+  margin: auto;
 }
 
 .container a:hover {

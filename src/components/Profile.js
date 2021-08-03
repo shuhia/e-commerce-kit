@@ -1,14 +1,14 @@
 import React from "react";
 import defaultProfileImg from "../images/testimonial-bg.png";
 
-function Profile({ img = defaultProfileImg }) {
+function Profile({ img = defaultProfileImg, width = 84, height = 84 }) {
   return (
     <div className="profile">
       <img
         style={{
           borderRadius: "50%",
-          width: 84,
-          height: 84,
+          width: width,
+          height: height,
           background: "white",
         }}
         className="profile-img"

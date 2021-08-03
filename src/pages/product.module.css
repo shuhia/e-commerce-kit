@@ -1,4 +1,5 @@
 .form {
+  padding: 50px;
 }
 
 .img {
@@ -6,7 +7,54 @@
   min-height: 277.44px;
 }
 
+.amount {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
 .price {
   color: green;
   font-size: bold;
+}
+
+.subscription {
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.subscription label {
+  margin: 5px;
+}
+
+.subscription p {
+  max-width: 400px;
+  margin: auto;
+}
+
+.facts {
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-align: left;
+  list-style: none;
+  width: 349px;
+  padding: 10px;
+  list-style: none;
+}
+
+.facts li {
+  text-decoration: none;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 42px;
+  border-radius: 4px;
+  margin: 10px auto;
+  background-color: var(--color1);
 }

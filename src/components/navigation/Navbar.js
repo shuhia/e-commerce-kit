@@ -88,11 +88,9 @@ function NavbarMobile({
       className={styles.container}
       onMouseEnter={(e) => {
         setActive(true);
-        console.log("entered");
       }}
       onMouseLeave={(e) => {
         setActive(false);
-        console.log("leaved");
       }}
     >
       <div className={styles.mobileMenu}>

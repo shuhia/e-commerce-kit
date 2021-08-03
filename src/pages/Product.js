@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Quantity from "../components/business/Quantity";
 import styles from "./product.module.css";
-import BigButton from "../components/buttons/BigButton";
+import cartIcon from "../images/cart.svg";
+import { v4 as uuidv4 } from "uuid";
 
 function Rectangle({
   width = 100,
@@ -27,30 +28,66 @@ function Square(width = 50, height = 50) {
   return <Rectangle width={width} height={height}></Rectangle>;
 }
 
-function Product(props) {
+function Product({
+  product = {
+    name: "Spiced Mint Candleaf ®",
+    id: "1",
+    img: "",
+    price: { value: 5, currency: "$" },
+    quantity: 1,
+  },
+  addItem,
+}) {
+  const { name, id, img, price } = product;
   function handleSubmit(e) {
     e.preventDefault();
-    alert("Add to cart");
+    const subcription = e.target["oneTime"].checked
+      ? false
+      : e.target["amount"].value;
+    console.log(subcription);
+    addItem({
+      ...product,
+      id: uuidv4(),
+      quantity: quantity,
+      subcription: subcription,
+    });
   }
+
+  const facts = Object.entries({
+    Wax: "Top grade soy wax that delivers a smokeless and consistent burn",
+    Fragrance: "Premium quality ingredients with natural essential oils",
+    Burn_Time: "70-75 hours",
+    Dimension: "10cm x 5cm",
+    Weight: "400g",
+  });
+
+  const [quantity, setAmount] = useState(1);
 
   return (
     <section className={styles.container}>
       <form id="order" className={styles.form} onSubmit={handleSubmit}>
-        <h1 className={styles.title}>Spiced Mint Candleaf®</h1>
-        <img className={styles.img} src="" alt="" />
         <div>
-          <span className={styles.price}>$ 9.99</span>
+          <h1 className={styles.title}>{name}</h1>
+          <img className={styles.img} src={img} alt="product" />
 
-          <Quantity></Quantity>
+          <div className={styles.amount}>
+            <span className={styles.price}>{price.value + price.currency}</span>
+            <Quantity value={quantity} setValue={setAmount}></Quantity>
+          </div>
         </div>
         <fieldset className={styles.subscription}>
-          <legend>Subscription</legend>
-          <input id="oneTime" htmlFor="order" name="time" type="radio"></input>
-          <label htmlFor="oneTime">One time purchase</label>
+          <input
+            id="oneTime"
+            htmlFor="order"
+            name="time"
+            type="radio"
+            defaultChecked
+          ></input>
+          <label for="oneTime">One time purchase</label>
           <div>
             <input id="weeks" htmlFor="order" type="radio" name="time"></input>
-            <label htmlFor="weeks"> Subscribe and deliver every</label>
-            <select id="amount" name="amount" htmlFor="order">
+            <label for="weeks">Subscribe and deliver every</label>
+            <select id="amount" name="amount" for="order">
               <option value={4}>4 weeks</option>
               <option value={3}>3 weeks</option>
               <option value={2}>2 weeks</option>
@@ -58,31 +95,30 @@ function Product(props) {
             </select>
             <p>
               Subscribe now and get the 10% of discount on every recurring
-              order. The discount will be applied at checkout. See details
+              order. The discount will be applied at checkout.
             </p>
           </div>
         </fieldset>
         <button type="submit" className={styles.submit}>
-          <span></span>
+          <img src={cartIcon} />
           <span>+ Add to cart</span>
         </button>
       </form>
-      <dl className={styles.features}>
-        <dt>Beast of Bodmin</dt>
-        <dd>A large feline inhabiting Bodmin Moor.</dd>
 
-        <dt>Morgawr</dt>
-        <dd>A sea serpent.</dd>
+      <ol className={styles.facts}>
+        {facts.map((fact) => (
+          <li>
+            <b>{fact[0]}</b>: {fact[1]}
+          </li>
+        ))}
+      </ol>
 
-        <dt>Owlman</dt>
-        <dd>A giant owl-like creature.</dd>
-      </dl>
       <footer>
-        <h1>
+        <div>
           All hand-made with natural soy wax, Candleaf is made htmlFor your
           pleasure moments
-        </h1>
-        <h2>🚚 FREE SHIPPING</h2>
+        </div>
+        <div>🚚 FREE SHIPPING</div>
       </footer>
     </section>
   );

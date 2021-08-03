@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./button.module.css";
+import { Link } from "react-router-dom";
 
 function Button(props) {
-  const { name = "Button" } = props;
+  const { name = "Button", href = "/" } = props;
   return (
-    <div className={styles.small}>
+    <Link to={href} className={styles.small}>
       <span>{name}</span>
-    </div>
+    </Link>
   );
 }
 
