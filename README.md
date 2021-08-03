@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Design template used in this project: https://www.figma.com/community/file/999496395784541518. 
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
