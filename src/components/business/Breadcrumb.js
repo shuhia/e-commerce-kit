@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function Breadcrumb({ pages = [] }) {
   return (
     <div>
-      <h2>Breadcrumb for checkout</h2>
       <ul className={styles.breadcrumb}>
         {pages.map((page, index) => {
           return (
