@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  max-height: 61px;
+  max-width: 200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+.controller {
+  text-align: center;
+  border: 1px solid green;
+  padding: 2px 5px;
+}
+
+.value {
+  display: inline;
+  max-width: 4ch;
+  padding: 0 5px;
+  margin: 1px;
+  text-align: center;
+  border: none;
+}
+
+.button {
+  background-color: white;
+  color: green;
+  border: 0;
+  padding: 0 5px;
+}

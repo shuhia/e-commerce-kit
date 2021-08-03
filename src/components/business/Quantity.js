@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useReducer, useEffect } from "react";
-import "./quantity.css";
+import styles from "./quantity.module.css";
 
 function Quantity(props) {
   const { value = 0, setValue = () => {} } = props;
   const setCount = (state, action) => {
     const { type, payload } = action;
+
     switch (type) {
       case "increase":
         return state + 1;
@@ -20,41 +21,43 @@ function Quantity(props) {
   };
 
   const [count, dispatch] = useReducer(setCount, value);
+  const inputRef = useRef();
 
   useEffect(() => setValue(count), [count, setValue]);
 
   return (
-    <div className="quantity">
+    <span className={styles.container}>
       <div
-        className="quantity-controller"
+        className={styles.controller}
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <button
-          className="button-decrease"
+        <span
+          className={styles.button}
           onClick={() => dispatch({ type: "decrease" })}
         >
           <b>-</b>
-        </button>
+        </span>
+        <label></label>
         <input
-          className="quantity-value"
+          className={styles.value}
+          onChange={(e) => {
+            dispatch({ type: "setState", payload: e.target.value });
+          }}
           value={count}
-          onInput={(e) =>
-            dispatch({ type: "setState", payload: e.target.value })
-          }
-          maxLength={3}
+          ref={inputRef}
         />
-        <button
-          className="button-increase"
+        <span
+          className={styles.button}
           onClick={() => dispatch({ type: "increase" })}
         >
           <b>+</b>
-        </button>
+        </span>
       </div>
-    </div>
+    </span>
   );
 }
 
