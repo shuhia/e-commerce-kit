@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import styles from "./cart.module.css";
 import Button from "../components/buttons/Button";
 import { useMediaQuery } from "react-responsive";
+import { useContext } from "react";
+import useCartContext from "../contexts/useCartContext";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   console.log(product);
@@ -60,7 +62,16 @@ function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   );
 }
 
-function Cart({ cart = [], addItem, removeItem, updateItem }) {
+function Cart(props) {
+  const {
+    cart,
+    setCart,
+    count,
+    addItem,
+    updateItem,
+    removeItem,
+  } = useCartContext();
+
   const isDektop = useMediaQuery({ minWidth: 800 });
 
   const items = cart.items;

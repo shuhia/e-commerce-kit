@@ -9,29 +9,15 @@ import Cards from "../components/cards/Cards";
 import candlesImage from "../images/candles.png";
 import Button from "../components/buttons/Button";
 
-import testmonialImage from "../images/cards-testimonial.png";
 import TestimonialCard from "../components/cards/TestimonialCard";
 
-function Home() {
+import Products from "../components/sections/Products";
+
+function Home({ products }) {
   return (
     <>
       <Header></Header>
-      <Section
-        id="products"
-        title="Products"
-        description="Order it for you or for your beloved ones."
-      >
-        <Cards>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-        </Cards>
-      </Section>
+      <Products products={products}></Products>
       <Section
         id="benefits"
         title="Clean and fragrant soy wax"
@@ -86,14 +72,7 @@ function Home() {
         id="popular"
         title="Popular"
         description="Our top selling product that you may like"
-      >
-        <Cards>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-        </Cards>
-      </Section>
+      ></Section>
     </>
   );
 }

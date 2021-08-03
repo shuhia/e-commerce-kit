@@ -3,18 +3,24 @@ import Card from "./Card";
 import "./cards.css";
 import { useHistory } from "react-router-dom";
 
-function ProductCard(props) {
+function ProductCard({ product = {}, setSelectedProduct }) {
+  const { price = "" } = product;
   const history = useHistory();
-  const { title, img, price, link = "/Product" } = props;
+
+  function handleClick(e) {
+    history.push("/product");
+    setSelectedProduct(product);
+  }
+  console.log(product);
   return (
-    <div className="product-card" onClick={() => history.push(link)}>
-      <img src={img} alt={title} />{" "}
+    <div className="product-card" onClick={handleClick}>
+      <img src={product.img} alt={product.name} />
       <div className="product-card-description">
         <div className="product-card-title">
-          <b>{title}</b>
+          <b>{product.name}</b>
         </div>
         <div className="product-card-price">
-          <b>{price}$</b>
+          <b>{price.value + price.currency}</b>
         </div>
       </div>
     </div>
