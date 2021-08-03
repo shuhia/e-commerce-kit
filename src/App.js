@@ -101,6 +101,11 @@ function App() {
               </NavItem>
             </>
           }
+          cart={
+            <NavItem href="/cart">
+              <CartItem count={count}></CartItem>
+            </NavItem>
+          }
         ></Navbar>
         <Switch>
           <Route exact path="/product">

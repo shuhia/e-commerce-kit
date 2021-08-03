@@ -6,18 +6,17 @@ import menu from "../../images/menu.svg";
 import closeMenu from "../../images/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-import CartItem from "../business/CartItem";
 
 import styles from "./navbar.module.css";
 
-function Navbar({ navItems }) {
+function Navbar({ navItems, cart }) {
   const onMobile = useMediaQuery({ query: "(max-width:800px)" });
   // Reset toggle
 
   return (
     <>
       {onMobile ? (
-        <NavbarMobile navItems={navItems}></NavbarMobile>
+        <NavbarMobile navItems={navItems} cart={cart}></NavbarMobile>
       ) : (
         <NavbarDesktop navItems={navItems}></NavbarDesktop>
       )}
@@ -26,10 +25,6 @@ function Navbar({ navItems }) {
 }
 
 export default Navbar;
-
-function NavItems({ items }) {
-  return { items };
-}
 
 function NavbarDesktop({
   navItems = (
@@ -62,6 +57,7 @@ function NavbarMobile({
       <NavItem name="Components" href="/components"></NavItem>
     </>
   ),
+  cart,
 }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -100,6 +96,7 @@ function NavbarMobile({
           <img src={closeMenu} onClick={(e) => setOpen(false)}></img>
         )}
         <img className="logo" src={logo}></img>
+        {cart}
       </div>
 
       {open && <ul className={styles.mobileItems}>{navItems}</ul>}
