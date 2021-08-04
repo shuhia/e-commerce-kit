@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CustomerContext from "./CustomerContext";
-import useStoreContext from "./useStoreContext";
 
 function CustomerProvider(props) {
-  const { product } = useStoreContext();
-  const [selectedProduct, setSelectedProduct] = useState(product);
+  const [selectedProduct, setSelectedProduct] = useState();
   const value = { selectedProduct, setSelectedProduct };
 
   function placeOrder() {}

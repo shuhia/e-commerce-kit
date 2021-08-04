@@ -18,9 +18,9 @@ import Components from "./pages/Components";
 import Discover from "./pages/Discover";
 import Profile from "./components/Profile";
 
-import CartProvider from "./contexts/CartProvider";
-import CustomerProvider from "./contexts/CustomerProvider";
-import StoreProvider from "./contexts/StoreProvider";
+import CartProvider from "./contexts/cart/CartProvider";
+import StoreProvider from "./contexts/store/StoreProvider";
+import CustomerProvider from "./contexts/customer/CustomerProvider";
 
 function App() {
   const discover = {
