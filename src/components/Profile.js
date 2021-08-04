@@ -13,6 +13,7 @@ function Profile({ img = defaultProfileImg, width = 84, height = 84 }) {
         }}
         className="profile-img"
         src={img}
+        alt="profile-image"
       />
     </div>
   );
@@ -29,6 +30,7 @@ function ProfileIcon({ img = defaultProfileImg }) {
       }}
       className="profile-img"
       src={img}
+      alt="profile-image"
     />
   </div>;
 }

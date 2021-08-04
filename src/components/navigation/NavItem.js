@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./navItem.module.css";
 
 function NavItem(props) {
@@ -7,10 +7,10 @@ function NavItem(props) {
   return (
     <li className={styles.container}>
       {active ? (
-        <Link to={href}>
+        <NavLink to={href}>
           {name}
           {props.children}
-        </Link>
+        </NavLink>
       ) : (
         <span style={{ backgroundColor: "grey" }}>
           {name}
