@@ -9,16 +9,16 @@ function Layout(props) {
   const navItems = (
     <>
       <NavItem name="Products" href="/discover"></NavItem>
-      <NavItem name="About" href="/about"></NavItem>
-      <NavItem name="Contact" href="/contact"></NavItem>
-      <NavItem href="/profile">
+      <NavItem name="About" href="/about" active={false}></NavItem>
+      <NavItem name="Contact" href="/contact" active={false}></NavItem>
+      <NavItem href="/profile" active={false}>
         <Profile width={50} height={50}></Profile>
       </NavItem>
 
       <NavItem href="/cart">
         <CartItem></CartItem>
       </NavItem>
-      <NavItem name="Components" href="/components"></NavItem>
+      <NavItem name="Components" href="/components" active={false}></NavItem>
     </>
   );
 
