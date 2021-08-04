@@ -77,7 +77,7 @@ function App() {
                 <Route exact path="/cart">
                   <Cart></Cart>
                 </Route>
-                <Route exact path="/checkout">
+                <Route path="/checkout">
                   <Checkout></Checkout>
                 </Route>
                 <Route exact path="/components" component={Components}></Route>

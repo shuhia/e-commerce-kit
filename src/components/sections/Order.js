@@ -4,12 +4,13 @@ import Coupon from "../business/Coupon";
 import BackgroundCard from "../cards/BackgroundCard";
 import styles from "./order.module.css";
 
-function Order() {
+function Order({ shipping = 0 }) {
   const { items, total, count } = useCartContext();
+  const currency = "$";
 
   return (
     <div className={styles.root}>
-      <tabel className={styles.table}>
+      <table className={styles.table}>
         {items.map((item) => {
           return (
             <tr className={styles.product} colspan="2">
@@ -45,17 +46,17 @@ function Order() {
         </tr>
         <tr>
           <td>Subtotal</td>
-          <td>Subtotal</td>
+          <td>{total + currency}</td>
         </tr>
         <tr>
           <td>shipping</td>
-          <td>shipping</td>
+          <td>{shipping + currency}</td>
         </tr>
         <tr>
           <td>total</td>
-          <td>total</td>
+          <td>{total + currency}</td>
         </tr>
-      </tabel>
+      </table>
     </div>
   );
 }

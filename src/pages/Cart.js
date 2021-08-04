@@ -8,6 +8,7 @@ import Button from "../components/buttons/Button";
 import { useMediaQuery } from "react-responsive";
 import { useContext } from "react";
 import useCartContext from "../contexts/useCartContext";
+import Breadcrumb from "../components/business/Breadcrumb";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   const { name, price, img, id } = product;
@@ -165,7 +166,11 @@ function Cart(props) {
       title="Your cart items"
       description={<Link to="/">Back to shopping</Link>}
       content={
-        <div className={styles.container}>{isDektop ? table : mobileTable}</div>
+        <>
+          <div className={styles.container}>
+            {isDektop ? table : mobileTable}
+          </div>
+        </>
       }
     ></SectionDesktop>
   );
