@@ -1,5 +1,4 @@
 .container {
-  
 }
 
 .table {
@@ -34,6 +33,10 @@
 .table tbody tr {
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: lightgrey;
 }
 
 .subtotal {

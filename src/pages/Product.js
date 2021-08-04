@@ -5,16 +5,13 @@ import cartIcon from "../images/cart.svg";
 import { v4 as uuidv4 } from "uuid";
 import { useMediaQuery } from "react-responsive";
 import useCartContext from "../contexts/useCartContext";
+import useCustomerContext from "../contexts/useCustomerContext";
+import useStoreContext from "../contexts/useStoreContext";
 
-function Product({
-  product = {
-    name: "Spiced Mint Candleaf ®",
-    id: "1",
-    img: "",
-    price: { value: 5, currency: "$" },
-    quantity: 1,
-  },
-}) {
+function Product() {
+  const { selectedProduct } = useCustomerContext();
+  const product = selectedProduct;
+
   const isDesktop = useMediaQuery({ minWidth: 800 });
   const { addItem } = useCartContext();
   useEffect(() => {

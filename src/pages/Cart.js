@@ -10,7 +10,6 @@ import { useContext } from "react";
 import useCartContext from "../contexts/useCartContext";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
-  console.log(product);
   const { name, price, img, id } = product;
   const [quantity, setQuantity] = useState(product.quantity);
   const [total, setTotal] = useState(price.value * quantity + price.currency);
@@ -70,31 +69,11 @@ function Cart(props) {
     addItem,
     updateItem,
     removeItem,
+    total,
   } = useCartContext();
 
   const isDektop = useMediaQuery({ minWidth: 800 });
-
   const items = cart.items;
-
-  const [total, setTotal] = useState((prev) =>
-    items.reduce(
-      (total, product) => total + product.price.value * product.quantity,
-      0
-    )
-  );
-
-  useEffect(() => {
-    updateTotal(items);
-  }, [items]);
-
-  function updateTotal(Products) {
-    setTotal((prev) =>
-      items.reduce(
-        (total, product) => total + product.price.value * product.quantity,
-        0
-      )
-    );
-  }
 
   const table = (
     <table className={styles.table}>
@@ -116,7 +95,6 @@ function Cart(props) {
                 product={product}
                 updateProduct={updateItem}
                 removeProduct={removeItem}
-                updateTotal={updateTotal}
                 isDektop={isDektop}
               ></ProductData>
             </tr>
@@ -160,7 +138,6 @@ function Cart(props) {
                 product={product}
                 updateProduct={updateItem}
                 removeProduct={removeItem}
-                updateTotal={updateTotal}
               ></ProductData>
             </tr>
           );

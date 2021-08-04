@@ -13,7 +13,10 @@ import TestimonialCard from "../components/cards/TestimonialCard";
 
 import Products from "../components/sections/Products";
 
-function Home({ products }) {
+import useStoreContext from "../contexts/useStoreContext";
+
+function Home() {
+  const { products } = useStoreContext();
   return (
     <>
       <Header></Header>

@@ -33,12 +33,21 @@ function CartProvider(props) {
 
   const [count, setCount] = useState(cart.items.length);
 
+  const [total, setTotal] = useState(0);
+
   useEffect(() => {
     setCount(cart.items.reduce((count, item) => count + item.quantity, 0));
+    setTotal(
+      cart.items.reduce(
+        (sum, item) => sum + item.price.value * item.quantity,
+        0
+      )
+    );
   }, [cart]);
 
   const addItem = (item) => {
-    setCart((prev) => ({ ...prev, items: [item, ...prev.items] }));
+    if (item.quantity > 0)
+      setCart((prev) => ({ ...prev, items: [item, ...prev.items] }));
   };
 
   function updateItem(item) {
@@ -58,7 +67,15 @@ function CartProvider(props) {
   // Functions
 
   // Value
-  const value = { cart, setCart, count, addItem, updateItem, removeItem };
+  const value = {
+    cart,
+    setCart,
+    count,
+    addItem,
+    updateItem,
+    removeItem,
+    total,
+  };
 
   return (
     <CartContext.Provider value={value}>{props.children}</CartContext.Provider>

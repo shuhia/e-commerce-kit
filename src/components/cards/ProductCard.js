@@ -2,16 +2,17 @@ import React from "react";
 import Card from "./Card";
 import "./cards.css";
 import { useHistory } from "react-router-dom";
+import useCustomerContext from "../../contexts/useCustomerContext";
 
-function ProductCard({ product = {}, setSelectedProduct }) {
+function ProductCard({ product }) {
   const { price = "" } = product;
   const history = useHistory();
+  const { setSelectedProduct } = useCustomerContext();
 
   function handleClick(e) {
     history.push("/product");
     setSelectedProduct(product);
   }
-  console.log(product);
   return (
     <div className="product-card" onClick={handleClick}>
       <img src={product.img} alt={product.name} />

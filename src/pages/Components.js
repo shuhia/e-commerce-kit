@@ -15,8 +15,10 @@ import Dropdown from "../components/business/Dropdown";
 import Coupon from "../components/business/Coupon";
 import Subscription from "../components/business/Subscription";
 import { NavbarDesktop, NavbarMobile } from "../components/navigation/Navbar";
+import useStoreContext from "../contexts/useStoreContext";
 
 function Components() {
+  const { randomProduct } = useStoreContext();
   return (
     <>
       <Section title="Navigation">
@@ -30,13 +32,9 @@ function Components() {
           title="Prodcuts"
           description="Order it for you or for your beloved ones."
         >
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <ProductCard title="test" img={product}></ProductCard>
-          <CartItem></CartItem>
+          <ProductCard product={randomProduct()}></ProductCard>
         </Cards>
+        <CartItem></CartItem>
       </Section>
       <Section>
         <TestimonialCard></TestimonialCard>

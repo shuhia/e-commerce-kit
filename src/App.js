@@ -18,15 +18,9 @@ import Components from "./pages/Components";
 import Discover from "./pages/Discover";
 import Profile from "./components/Profile";
 
-import productImg from "./images/product-1.png";
-
-import { v4 as uuidv4 } from "uuid";
-
 import CartProvider from "./contexts/CartProvider";
-
-function random(min = 0, max = 10) {
-  return min + Math.floor(Math.random() * max + 1);
-}
+import CustomerProvider from "./contexts/CustomerProvider";
+import StoreProvider from "./contexts/StoreProvider";
 
 function App() {
   const discover = {
@@ -46,72 +40,57 @@ function App() {
   };
 
   const lists = [discover, about, info];
-  const product = {
-    name: "Spiced Mint Candleaf ®",
-    id: uuidv4(),
-    img: productImg,
-    price: { value: random(), currency: "$" },
-    quantity: 1,
-  };
-
-  const product2 = {
-    name: "Spiced Mint Candleaf ®",
-    id: uuidv4(),
-    img: productImg,
-    price: { value: random(), currency: "$" },
-    quantity: 1,
-  };
-
-  const products = [product, product2];
-
-  const [selectedProduct, setSelectedProduct] = useState(product);
 
   return (
     <>
-      <CartProvider>
-        <Router>
-          <Navbar
-            navItems={
-              <>
-                <NavItem name="Products" href="/discover"></NavItem>
-                <NavItem name="About" href="/about"></NavItem>
-                <NavItem name="Contact" href="/contact"></NavItem>
-                <NavItem href="/profile">
-                  <Profile width={50} height={50}></Profile>
-                </NavItem>
+      <StoreProvider>
+        <CustomerProvider>
+          <CartProvider>
+            <Router>
+              <Navbar
+                navItems={
+                  <>
+                    <NavItem name="Products" href="/discover"></NavItem>
+                    <NavItem name="About" href="/about"></NavItem>
+                    <NavItem name="Contact" href="/contact"></NavItem>
+                    <NavItem href="/profile">
+                      <Profile width={50} height={50}></Profile>
+                    </NavItem>
 
-                <NavItem href="/cart">
-                  <CartItem></CartItem>
-                </NavItem>
-                <NavItem name="Components" href="/components"></NavItem>
-              </>
-            }
-            cart={
-              <NavItem href="/cart">
-                <CartItem></CartItem>
-              </NavItem>
-            }
-          ></Navbar>
-          <Switch>
-            <Route exact path="/product">
-              <Product product={selectedProduct}></Product>
-            </Route>
-            <Route exact path="/discover" component={Discover}></Route>
-            <Route exact path="/cart">
-              <Cart></Cart>
-            </Route>
-            <Route exact path="/checkout">
-              <Checkout></Checkout>
-            </Route>
-            <Route exact path="/components" component={Components}></Route>
-            <Route exact path="/about" component={About}></Route>
-            <Route exact path="/">
-              <Home products={products}></Home>
-            </Route>
-          </Switch>
-          <Footer lists={lists}></Footer>
-        </Router>
-      </CartProvider>
+                    <NavItem href="/cart">
+                      <CartItem></CartItem>
+                    </NavItem>
+                    <NavItem name="Components" href="/components"></NavItem>
+                  </>
+                }
+                cart={
+                  <NavItem href="/cart">
+                    <CartItem></CartItem>
+                  </NavItem>
+                }
+              ></Navbar>
+              <Switch>
+                <Route exact path="/product">
+                  <Product></Product>
+                </Route>
+                <Route exact path="/discover" component={Discover}></Route>
+                <Route exact path="/cart">
+                  <Cart></Cart>
+                </Route>
+                <Route exact path="/checkout">
+                  <Checkout></Checkout>
+                </Route>
+                <Route exact path="/components" component={Components}></Route>
+                <Route exact path="/about" component={About}></Route>
+                <Route exact path="/">
+                  <Home></Home>
+                </Route>
+              </Switch>
+              <Footer lists={lists}></Footer>
+            </Router>
+          </CartProvider>
+        </CustomerProvider>
+      </StoreProvider>
     </>
   );
 }
