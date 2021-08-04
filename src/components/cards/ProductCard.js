@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import "./cards.css";
 import { useHistory } from "react-router-dom";
-import useCustomerContext from "../../contexts/useCustomerContext";
+import useCustomerContext from "../../contexts/customer/useCustomerContext";
 
 function ProductCard({ product }) {
   const { price = "" } = product;

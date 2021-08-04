@@ -7,7 +7,7 @@ import styles from "./cart.module.css";
 import Button from "../components/buttons/Button";
 import { useMediaQuery } from "react-responsive";
 import { useContext } from "react";
-import useCartContext from "../contexts/useCartContext";
+import useCartContext from "../contexts/cart/useCartContext";
 import Breadcrumb from "../components/business/Breadcrumb";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {

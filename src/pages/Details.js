@@ -7,7 +7,7 @@ import Input from "../components/business/Input";
 import Dropdown from "../components/business/Dropdown";
 import Button from "../components/buttons/Button";
 import Coupon from "../components/business/Coupon";
-import useCartContext from "../contexts/useCartContext";
+import useCartContext from "../contexts/cart/useCartContext";
 import Order from "../components/sections/Order";
 
 function Inputs(props) {
@@ -52,8 +52,15 @@ function Details() {
             <Input name="Postal code" size="small" for="details"></Input>
             <Input name="Province" size="small" for="details"></Input>
           </Inputs>
-          <Dropdown id="country" for="details">
-            <option value="italy">italy</option>
+          <Dropdown
+            id="country"
+            for="details"
+            label="country"
+            options={["italy"]}
+          >
+            <option value="italy" label="country">
+              italy
+            </option>
           </Dropdown>
           <input id="save" type="checkbox" for="details"></input>
           <label for="save">
@@ -95,7 +102,12 @@ function Details() {
       <Input name="city" for="details"></Input>
       <Input name="Postal code" for="details"></Input>
       <Input name="Province" for="details"></Input>
-      <Dropdown id="country" for="details" options={["italy"]}></Dropdown>
+      <Dropdown
+        id="country"
+        for="details"
+        label="country"
+        options={["italy"]}
+      ></Dropdown>
       <input type="checkbox"></input>
       <label for="save">
         Save this informations for a future fast checkout

@@ -4,9 +4,9 @@ import styles from "./product.module.css";
 import cartIcon from "../images/cart.svg";
 import { v4 as uuidv4 } from "uuid";
 import { useMediaQuery } from "react-responsive";
-import useCartContext from "../contexts/useCartContext";
-import useCustomerContext from "../contexts/useCustomerContext";
-import useStoreContext from "../contexts/useStoreContext";
+import useCartContext from "../contexts/cart/useCartContext";
+import useCustomerContext from "../contexts/customer/useCustomerContext";
+import useStoreContext from "../contexts/store/useStoreContext";
 
 function Product() {
   const { selectedProduct } = useCustomerContext();

@@ -3,7 +3,7 @@ import Section from "../components/Section";
 import ProductCard from "../components/cards/ProductCard";
 import product from "../images/product-1.png";
 import Cards from "../components/cards/Cards";
-import useStoreContext from "../contexts/useStoreContext";
+import useStoreContext from "../contexts/store/useStoreContext";
 
 function Discover() {
   const { products } = useStoreContext();

@@ -15,7 +15,7 @@ import Dropdown from "../components/business/Dropdown";
 import Coupon from "../components/business/Coupon";
 import Subscription from "../components/business/Subscription";
 import { NavbarDesktop, NavbarMobile } from "../components/navigation/Navbar";
-import useStoreContext from "../contexts/useStoreContext";
+import useStoreContext from "../contexts/store/useStoreContext";
 
 function Components() {
   const { randomProduct } = useStoreContext();

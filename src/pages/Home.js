@@ -13,7 +13,7 @@ import TestimonialCard from "../components/cards/TestimonialCard";
 
 import Products from "../components/sections/Products";
 
-import useStoreContext from "../contexts/useStoreContext";
+import useStoreContext from "../contexts/store/useStoreContext";
 
 function Home() {
   const { products } = useStoreContext();
