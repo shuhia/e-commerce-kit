@@ -12,7 +12,7 @@ function NavItem(props) {
           {props.children}
         </NavLink>
       ) : (
-        <span style={{ backgroundColor: "grey" }}>
+        <span style={{ opacity: 0 }}>
           {name}
           {props.children}
         </span>
