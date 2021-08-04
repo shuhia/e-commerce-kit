@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BigButton from "../components/buttons/BigButton";
-import Section, { SectionDesktop } from "../components/Section";
+import Section, { SectionDesktop } from "../components/sections/Section";
 import Quantity from "../components/business/Quantity";
 import { Link } from "react-router-dom";
 import styles from "./cart.module.css";

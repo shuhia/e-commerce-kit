@@ -21,7 +21,7 @@ section header {
 }
 
 #section-benefits ul {
-  list-style: url("./../images/checkmark.svg");
+  list-style: url("../../images/checkmark.svg");
   text-align: left;
   max-width: 50%;
 }

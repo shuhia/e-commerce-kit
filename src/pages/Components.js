@@ -1,6 +1,6 @@
 import React from "react";
 import Quantity from "../components/business/Quantity";
-import Section from "../components/Section";
+import Section from "../components/sections/Section";
 import ProductCard from "../components/cards/ProductCard";
 import product from "../images/product-1.png";
 import Cards from "../components/cards/Cards";
