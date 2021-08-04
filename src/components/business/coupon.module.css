@@ -1,5 +1,5 @@
 .container {
-  display: flex;
+  margin: auto;
 }
 .container input {
   height: 40px;

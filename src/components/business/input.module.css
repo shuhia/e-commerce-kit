@@ -1,23 +1,28 @@
-.large {
+.large,
+.medium,
+.small,
+.mobile {
   position: relative;
+  display: block;
+  margin: 5px;
+}
+
+.large {
   width: 445px;
   height: 40px;
 }
 
 .medium {
-  position: relative;
   width: 216px;
   height: 40px;
 }
 
 .small {
-  position: relative;
   width: 140px;
   height: 40px;
 }
 
 .mobile {
-  position: relative;
   width: 346px;
   height: 40px;
 }

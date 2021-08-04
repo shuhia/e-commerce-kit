@@ -2,11 +2,14 @@ import React, { useRef, useState, useEffect } from "react";
 import styles from "./dropdown.module.css";
 import arrow from "../../images/keyboard_arrow_down_black_24dp.svg";
 
-function Dropdown({ size = "big", label = "label" }) {
+function Dropdown({
+  size = "large",
+  label = "label",
+  options = ["test1", "test2", "test3"],
+}) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
-  const options = ["test1", "test2", "test3"];
   const [selected, setSelected] = useState("province");
   function select(e) {
     setSelected(options[e.target.id]);

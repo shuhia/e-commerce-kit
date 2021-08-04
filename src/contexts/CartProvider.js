@@ -30,7 +30,7 @@ function CartProvider(props) {
   const products = [product, product2];
 
   const [cart, setCart] = useState({ owner: "", items: products });
-
+  const items = cart.items;
   const [count, setCount] = useState(cart.items.length);
 
   const [total, setTotal] = useState(0);
@@ -69,6 +69,7 @@ function CartProvider(props) {
   // Value
   const value = {
     cart,
+    items,
     setCart,
     count,
     addItem,

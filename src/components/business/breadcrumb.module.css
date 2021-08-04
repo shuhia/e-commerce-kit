@@ -13,10 +13,10 @@
   content: ">\00a0";
 }
 
-.breadcrumb li a {
+.link {
   color: black;
 }
 
-.breadcrumb li a:link {
+.link:link {
   text-decoration: none;
 }

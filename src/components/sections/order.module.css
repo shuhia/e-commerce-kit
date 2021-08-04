@@ -1,0 +1,19 @@
+.root {
+  background-color: lightgrey;
+}
+
+.table {
+  text-align: left;
+  padding: 10px;
+}
+
+.table td {
+  padding: 5px;
+}
+
+.table tr :last-child {
+  font-weight: bold;
+}
+.coupon {
+  margin: auto;
+}

@@ -1,3 +1,10 @@
+.large,
+.medium,
+.small,
+.mobile {
+  margin: auto;
+}
+
 .large {
   position: relative;
   width: 445px;

@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   useRouteMatch,
+  Redirect,
 } from "react-router-dom";
 import Breadcrumb from "../components/business/Breadcrumb";
 import Details from "./Details";
@@ -36,6 +37,9 @@ function Checkout() {
         </Route>
         <Route exact path={path + "/payment"}>
           <Payment></Payment>
+        </Route>
+        <Route exact path={path}>
+          <Redirect to={path + "/details"}></Redirect>
         </Route>
       </Switch>
     </Router>
