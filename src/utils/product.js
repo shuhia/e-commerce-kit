@@ -1,6 +1,6 @@
 import { randomNumber } from "./utils";
 import { v4 as uuidv4 } from "uuid";
-import productImg from "../images/product-1.png";
+import productImage from "../images/product-1.png";
 
 /**
  * Summary: Creates a random product.
@@ -14,13 +14,13 @@ import productImg from "../images/product-1.png";
  * @param {Function} getPrice Returns the price of the product in string.
  * @param {Number} quantity The amount of the product.
  * @param {Object} options Any properties that are not implemented.
- * @returns {Object} Object with this format: {name, id, img, price, quantity, options}.
+ * @returns {Object} Object with this format: {name, id, img, price, getPrice, quantity, options}.
  */
 
 function randomProduct(
   name = "Spiced Mint Candleaf ®",
   id = uuidv4(),
-  img = { productImg },
+  img = productImage,
   price = {
     value: randomNumber(),
     currency: "$",
@@ -36,6 +36,7 @@ function randomProduct(
     id,
     img,
     price,
+    getPrice,
     quantity,
   };
 }

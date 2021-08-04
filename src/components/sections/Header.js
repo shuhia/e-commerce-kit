@@ -1,5 +1,5 @@
 import React from "react";
-import BackgroundCard from "./cards/BackgroundCard";
+import BackgroundCard from "../cards/BackgroundCard";
 
 function Header() {
   return (

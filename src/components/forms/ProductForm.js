@@ -1,30 +1,27 @@
 import React from "react";
-import Quantity from "./business/Quantity";
-import productImg from "../images/product-1.png";
-import BigButton from "./buttons/BigButton";
-import { ReactComponent as Cart } from "../images/cart.svg";
-function Form({
-  price = 0,
-  currency = "$",
-  quantity,
-  options,
-  title = "Spiced Mint Candleaf®",
-  img = productImg,
-  setData,
-}) {
+import Quantity from "../business/Quantity";
+import BigButton from "../buttons/BigButton";
+import { ReactComponent as Cart } from "../../images/cart.svg";
+import { randomProduct } from "../../utils/product";
+
+function ProductForm(props) {
+  // Default values if props is undefined
+  const { title = "Form" } = props;
+
+  // Create a random product
+  const product = randomProduct();
+  const { name, id, img, price, getPrice, quantity, options } = product;
+
   function handleSubmit(e) {
-    // get form data
-    const data = "";
-    // Send form data
-    
+    e.preventDefault();
   }
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={handleSubmit}>
       <div className="title">{title}</div>
       <img src={img} />
       <div>
-        <h1>{price + currency}</h1>
+        <h1>{product.getPrice()}</h1>
         <Quantity></Quantity>
       </div>
       <input type="radio" id="one-time" name="choice"></input>
@@ -50,4 +47,4 @@ function Form({
   );
 }
 
-export default Form;
+export default ProductForm;

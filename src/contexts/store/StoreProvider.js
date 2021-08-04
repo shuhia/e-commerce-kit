@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import StoreContext from "./StoreContext";
-import { v4 as uuidv4 } from "uuid";
 import { randomProduct, randomProducts } from "../../utils/utils";
 
 function StoreProvider(props) {

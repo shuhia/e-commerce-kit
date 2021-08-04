@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import BigButton from "../components/buttons/BigButton";
-import Section, { SectionDesktop } from "../components/sections/Section";
 import Quantity from "../components/business/Quantity";
 import { Link } from "react-router-dom";
 import styles from "./cart.module.css";
 import Button from "../components/buttons/Button";
 import { useMediaQuery } from "react-responsive";
-import { useContext } from "react";
 import useCartContext from "../contexts/cart/useCartContext";
-import Breadcrumb from "../components/business/Breadcrumb";
+import { SectionDesktop } from "../components/sections/Section";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   const { name, price, img, id } = product;

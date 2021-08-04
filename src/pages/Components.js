@@ -2,13 +2,12 @@ import React from "react";
 import Quantity from "../components/business/Quantity";
 import Section from "../components/sections/Section";
 import ProductCard from "../components/cards/ProductCard";
-import product from "../images/product-1.png";
 import Cards from "../components/cards/Cards";
 import CartItem from "../components/business/CartItem";
 import Rating from "../components/Rating";
 import Profile from "../components/Profile";
 import TestimonialCard from "../components/cards/TestimonialCard";
-import Form from "../components/Form";
+import ProductForm from "../components/forms/ProductForm";
 import Breadcrumb from "../components/business/Breadcrumb";
 import Input from "../components/business/Input";
 import Dropdown from "../components/business/Dropdown";
@@ -42,7 +41,7 @@ function Components() {
         <Profile></Profile>
       </Section>
       <Section title="order">
-        <Form></Form>
+        <ProductForm></ProductForm>
         <p className="description">
           All hand-made with natural soy wax, Candleaf is made for your pleasure
           moments.

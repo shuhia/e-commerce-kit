@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/sections/Header";
 
 import candlesImage from "../images/candles.png";
 import Benefits from "../components/sections/Benefits";

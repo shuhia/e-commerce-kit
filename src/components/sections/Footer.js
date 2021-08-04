@@ -1,11 +1,11 @@
 import React from "react";
-import footerLogo from "../images/footer-logo.png";
+import footerLogo from "../../images/footer-logo.png";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
 import { useHistory } from "react-router";
 
 function Footer(props) {
-  const { lists } = props;
+  const lists = props.footerLinks;
   const history = useHistory();
 
   return (

@@ -13,11 +13,12 @@ function Product() {
   const product = selectedProduct;
 
   const isDesktop = useMediaQuery({ minWidth: 800 });
-  const { addItem } = useCartContext();
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
   }, []);
+  const { addItem } = useCartContext();
+
   const { name, id, img, price } = product;
   function handleSubmit(e) {
     e.preventDefault();
