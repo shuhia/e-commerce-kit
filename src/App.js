@@ -11,12 +11,26 @@ import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import Components from "./pages/Components";
 import Discover from "./pages/Discover";
+import Details from "./pages/Details";
+import Shipping from "./pages/Shipping";
+import Payment from "./pages/Payment";
+import { Redirect } from "react-router";
 
 import CartProvider from "./contexts/cart/CartProvider";
 import StoreProvider from "./contexts/store/StoreProvider";
 import CustomerProvider from "./contexts/customer/CustomerProvider";
+import Breadcrumb from "./components/business/Breadcrumb";
 
 function App() {
+  const path = "/checkout";
+  const pages = [
+    { name: "cart", href: "/cart" },
+    { name: "details", href: path + "/details" },
+    { name: "shipping", href: path + "/shipping" },
+    { name: "payment", href: path + "/payment" },
+  ];
+  const breadCrumb = <Breadcrumb pages={pages}></Breadcrumb>;
+
   return (
     <>
       <Router>
@@ -28,7 +42,6 @@ function App() {
                   <Route exact path="/product" component={Product}></Route>
                   <Route exact path="/discover" component={Discover}></Route>
                   <Route exact path="/cart" component={Cart}></Route>
-                  <Route path="/checkout" component={Checkout}></Route>
                   <Route
                     exact
                     path="/components"
@@ -36,6 +49,21 @@ function App() {
                   ></Route>
                   <Route exact path="/about" component={About}></Route>
                   <Route exact path="/" component={Home}></Route>
+                  <Route exact path={"/checkout/details"}>
+                    {breadCrumb}
+                    <Details></Details>
+                  </Route>
+                  <Route exact path={"/checkout/shipping"}>
+                    {breadCrumb}
+                    <Shipping></Shipping>
+                  </Route>
+                  <Route exact path={"/checkout/payment"}>
+                    {breadCrumb}
+                    <Payment></Payment>
+                  </Route>
+                  <Route exact path={"/checkout"}>
+                    <Redirect exact to={"/checkout/details"}></Redirect>
+                  </Route>
                 </Switch>
               </Layout>
             </CartProvider>
