@@ -1,6 +1,6 @@
 import React from "react";
 import Quantity from "../business/Quantity";
-import BigButton from "../buttons/BigButton";
+import LinkButton from "../buttons/LinkButton";
 import { ReactComponent as Cart } from "../../images/cart.svg";
 import { randomProduct } from "../../utils/product";
 
@@ -38,7 +38,7 @@ function ProductForm(props) {
           The discount will be applied at checkout. See details
         </p>
       </div>
-      <BigButton name="Add to cart" href="#" img={<Cart></Cart>}></BigButton>
+      <LinkButton name="Add to cart" href="#" img={<Cart></Cart>}></LinkButton>
       <div>
         <p>Facts</p>
         <ul></ul>

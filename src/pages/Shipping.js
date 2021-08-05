@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Order from "../components/sections/Order";
-import BigButton from "../components/buttons/BigButton";
+import LinkButton from "../components/buttons/LinkButton";
 
 import { useRef } from "react";
 
@@ -87,10 +87,10 @@ function Shipping() {
             </div>
           </div>
         </fieldset>
-        <BigButton
+        <LinkButton
           name="Go to payment"
           href={"/checkout" + "/payment"}
-        ></BigButton>
+        ></LinkButton>
       </form>
       <Order></Order>
     </section>

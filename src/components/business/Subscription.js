@@ -1,7 +1,7 @@
 import React from "react";
 import Quantity from "./Quantity";
 import productImg from "../../images/product-1.png";
-import BigButton from "../buttons/BigButton";
+import LinkButton from "../buttons/LinkButton";
 
 import styles from "./subscription.module.css";
 

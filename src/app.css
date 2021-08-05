@@ -15,16 +15,9 @@
   background: url(./images/bg-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-clip: border-box;
   background-position: center;
   justify-content: center;
   align-items: center;
-}
-
-.disabled {
-  background-color: grey;
-  color: black;
-  border: 1px grey solid;
 }
 
 .input-big {

@@ -1,5 +1,5 @@
 import React from "react";
-import BigButton from "../components/buttons/BigButton";
+import LinkButton from "../components/buttons/LinkButton";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Input from "../components/business/Input";
@@ -116,10 +116,10 @@ function Details() {
       <div>
         <Link href="/checkout/cart">Back to cart</Link>
       </div>
-      <BigButton
+      <LinkButton
         name="Go to shipping"
         href={"/checkout" + "/shipping"}
-      ></BigButton>
+      ></LinkButton>
     </form>
   );
 

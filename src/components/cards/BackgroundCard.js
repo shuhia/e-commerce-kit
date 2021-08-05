@@ -1,6 +1,6 @@
 import React from "react";
 import "./cards.css";
-import BigButton from "../buttons/BigButton";
+import LinkButton from "../buttons/LinkButton";
 
 function BackgroundCard() {
   return (
@@ -15,7 +15,7 @@ function BackgroundCard() {
           your pleasure moments
         </p>
       </div>
-      <BigButton name="discover our collection" href="/discover"></BigButton>
+      <LinkButton name="discover our collection" href="/discover"></LinkButton>
     </div>
   );
 }
