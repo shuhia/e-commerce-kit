@@ -1,12 +1,13 @@
 import React from "react";
 
 import LinkButton from "../components/buttons/LinkButton";
+import PaymentForm from "../components/forms/PaymentForm";
 
 function Payment() {
   return (
-    <div>
-      <LinkButton name="Pay now"></LinkButton>
-    </div>
+    <section>
+      <PaymentForm></PaymentForm>
+    </section>
   );
 }
 
