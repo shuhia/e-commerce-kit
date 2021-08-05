@@ -9,13 +9,14 @@
   text-align: center;
   border: 1px solid green;
   padding: 2px 5px;
+  background-color: grey;
 }
 
 .value {
   display: inline;
   max-width: 4ch;
   padding: 0 5px;
-  margin: 1px;
+  margin: 3px;
   text-align: center;
   border: none;
 }

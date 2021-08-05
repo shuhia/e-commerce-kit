@@ -8,7 +8,6 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
-import Checkout from "./pages/Checkout";
 import Components from "./pages/Components";
 import Discover from "./pages/Discover";
 import Details from "./pages/Details";
