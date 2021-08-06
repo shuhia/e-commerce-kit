@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  min-width: 100%;
+  aspect-ratio: 375/780;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  z-index: 10;
+  min-width: 346px;
+  min-height: 371px;
+  margin: 0 14px;
+  background: rgba(247, 248, 250, 0.8);
+  backdrop-filter: blur(24px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 2px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.title {
+  width: 327px;
+  height: 146px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  /* or 119% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #1d252c;
+}
+
+.description {
+  width: 299px;
+  min-height: 56px;
+  text-align: center;
+  margin: 10px;
+}
+
+@media screen and (min-width: 800px), (orientation: landscape) {
+  .container {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    min-width: 100%;
+    aspect-ratio: 1440/780;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440/780;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .card {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    z-index: 10;
+    max-width: 730px;
+    max-height: 349px;
+
+    background: rgba(247, 248, 250, 0.8);
+    backdrop-filter: blur(24px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 2px;
+    padding: 20px 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    display: flex;
+    min-width: 540px;
+    height: 112px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 119% */
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #1d252c;
+  }
+
+  .description {
+    max-width: 537px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .card a {
+    width: 310px;
+  }
+}
