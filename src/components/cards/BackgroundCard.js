@@ -1,16 +1,16 @@
 import React from "react";
-import "./cards.css";
 import LinkButton from "../buttons/LinkButton";
+import styles from "./card.module.css";
 
 function BackgroundCard() {
   return (
-    <div className="background-card">
+    <div className={styles.background}>
       <div>
-        <div className="background-card-title">
+        <div className={styles.title}>
           <div>🌱</div>
           <div>The nature of candle</div>
         </div>
-        <p className="background-card-description">
+        <p className={styles.decription}>
           All handmade with natural soy wax, Candleaf is a companion for all
           your pleasure moments
         </p>

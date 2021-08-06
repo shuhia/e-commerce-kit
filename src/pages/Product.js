@@ -7,9 +7,10 @@ import { useMediaQuery } from "react-responsive";
 import useCartContext from "../contexts/cart/useCartContext";
 import useCustomerContext from "../contexts/customer/useCustomerContext";
 import useStoreContext from "../contexts/store/useStoreContext";
+import { randomProduct } from "../utils/utils";
 
 function Product() {
-  const { selectedProduct } = useCustomerContext();
+  const { selectedProduct = randomProduct() } = useCustomerContext();
   const product = selectedProduct;
 
   const isDesktop = useMediaQuery({ minWidth: 800 });

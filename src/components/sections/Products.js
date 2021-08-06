@@ -7,19 +7,14 @@ function Products({ products = [] }) {
   console.log(products);
   return (
     <Section
-      id="products"
       title="Products"
-      description="Order it for you or for your beloved ones."
+      description="Order it for you or for your beloved ones "
     >
       <Cards>
-        {products.map((product, index) => {
-          return (
-            <ProductCard
-              key={"product-" + index}
-              product={product}
-            ></ProductCard>
-          );
-        })}
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
       </Cards>
     </Section>
   );

@@ -1,12 +1,12 @@
 import React from "react";
-import "./cards.css";
+import styles from "./card.module.css";
 
 function Card({ img = "", title = "", description = "" }) {
   return (
-    <div className="card">
-      <img className="card-image" src={img} alt={title}></img>
-      <div className="card-title">{title}</div>
-      <div className="card-description">{description}</div>
+    <div className={styles.container}>
+      <img className={styles.image} src={img} alt={title}></img>
+      <div className={styles.title}>{title}</div>
+      <div className={styles.description}>{description}</div>
     </div>
   );
 }

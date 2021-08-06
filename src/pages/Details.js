@@ -5,23 +5,18 @@ import { useMediaQuery } from "react-responsive";
 import Input from "../components/business/Input";
 
 import Dropdown from "../components/business/Dropdown";
-import Button from "../components/buttons/Button";
-import Coupon from "../components/business/Coupon";
-import useCartContext from "../contexts/cart/useCartContext";
 import Order from "../components/sections/Order";
+import Section from "../components/sections/Section";
 
 function Inputs(props) {
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        {props.children}
-      </div>
+      <div style={{ display: "flex" }}>{props.children}</div>
     </>
   );
 }
 
 function Details() {
-  const { cart } = useCartContext();
   const isMobile = useMediaQuery({ maxWidth: 800 });
   const desktop = (
     <>
@@ -69,10 +64,10 @@ function Details() {
         </fieldset>
         <Inputs>
           <Link href="/checkout/cart">Back to cart</Link>
-          <Button
+          <LinkButton
             name="Go to shipping"
             href={"/checkout" + "/shipping"}
-          ></Button>
+          ></LinkButton>
         </Inputs>
       </form>
       <Order></Order>
@@ -125,7 +120,17 @@ function Details() {
 
   return (
     <>
-      <section>{isMobile ? mobile : desktop}</section>
+      <section
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "0 10%",
+        }}
+      >
+        {isMobile ? mobile : desktop}
+      </section>
     </>
   );
 }

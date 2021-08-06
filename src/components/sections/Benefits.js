@@ -1,8 +1,9 @@
 import React from "react";
 import Section from "./Section";
 import Button from "../buttons/Button";
+import imgCandles from "../../images/candles.png";
 
-function Benefits(candlesImage) {
+function Benefits() {
   return (
     <Section
       id="benefits"
@@ -11,7 +12,7 @@ function Benefits(candlesImage) {
       content={<></>}
     >
       <aside>
-        <img className="benefits-candles" src={candlesImage}></img>
+        <img className="benefits-candles" src={imgCandles}></img>
       </aside>
       <ul>
         <li>

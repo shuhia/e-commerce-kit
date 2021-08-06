@@ -1,34 +1,7 @@
-section {
-  min-height: 10%;
-  min-width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-}
-
-section header {
-  text-transform: capitalize;
-  width: 50%;
-}
-#section-benefits {
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #f7f8fa;
-}
-
 #section-benefits ul {
   list-style: url("../../images/checkmark.svg");
   text-align: left;
   max-width: 50%;
-}
-
-#section-benefits img {
-  align-self: flex-end;
-  max-width: 100%;
 }
 
 #section-testimonials {
@@ -36,12 +9,4 @@ section header {
   min-height: 100%;
   padding: 5%;
   flex-direction: column;
-}
-
-#section-products {
-  padding: 5% 10%;
-}
-
-.section-button {
-  padding: 20px;
 }

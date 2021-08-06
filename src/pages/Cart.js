@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import Quantity from "../components/business/Quantity";
 import { Link } from "react-router-dom";
 import styles from "./cart.module.css";
-import Button from "../components/buttons/Button";
+import LinkButton from "../components/buttons/LinkButton";
 import { useMediaQuery } from "react-responsive";
 import useCartContext from "../contexts/cart/useCartContext";
-import { SectionDesktop } from "../components/sections/Section";
+import Section from "../components/sections/Section";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   const { name, price, img, id } = product;
@@ -111,7 +111,7 @@ function Cart(props) {
             <div>Tax and shipping cost will be calculated later</div>
           </td>
           <td>
-            <Button name="Checkout" href="/checkout"></Button>
+            <LinkButton name="Checkout" href="/checkout"></LinkButton>
           </td>
         </tr>
       </tfoot>
@@ -151,7 +151,7 @@ function Cart(props) {
               </b>
             </div>
             <div>Tax and shipping cost will be calculated later</div>
-            <Button name="Checkout" href="/checkout"></Button>
+            <LinkButton name="Checkout" href="/checkout"></LinkButton>
           </td>
         </tr>
       </tfoot>
@@ -159,7 +159,7 @@ function Cart(props) {
   );
 
   return (
-    <SectionDesktop
+    <Section
       title="Your cart items"
       description={<Link to="/">Back to shopping</Link>}
       content={
@@ -169,7 +169,7 @@ function Cart(props) {
           </div>
         </>
       }
-    ></SectionDesktop>
+    ></Section>
   );
 }
 

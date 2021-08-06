@@ -1,5 +1,8 @@
 .container {
   margin: auto;
+  display: flex;
+
+  gap: 10px;
 }
 .container input {
   height: 40px;
@@ -10,7 +13,6 @@
   background: grey;
   border: 1px;
   border-radius: 4px;
-  width: 116px;
 }
 
 .container :last-child:active {
