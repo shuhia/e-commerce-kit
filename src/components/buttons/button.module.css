@@ -3,13 +3,14 @@
   text-decoration: none;
   color: white;
   margin: auto;
+  padding: 0 40px;
 }
 
 .small {
   /* green */
   position: relative;
   display: flex;
-  width: 150px;
+  min-width: 150px;
   height: 40px;
   background: var(--color1);
   border-radius: 4px;
@@ -40,7 +41,7 @@
   position: relative;
   background-color: var(--color1);
   color: var(--color3);
-  width: 350px;
+  max-width: 350px;
   height: 42px;
   display: flex;
   justify-content: center;
