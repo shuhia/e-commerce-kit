@@ -6,10 +6,11 @@ import menu from "../../images/menu.svg";
 import closeMenu from "../../images/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import CartItem from "../business/CartItem";
 
 import styles from "./navbar.module.css";
 
-function Navbar({ navItems, cart }) {
+function Navbar({ navItems, cart = <CartItem></CartItem> }) {
   const onMobile = useMediaQuery({ query: "(max-width:800px)" });
   // Reset toggle
 
