@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c b";
+  background-color: grey;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  grid-area: a;
+  width: 539px;
+  height: 58px;
+  background-color: rgb(73, 73, 73);
+}
+.image {
+  grid-area: b;
+  width: 540px;
+  height: 433px;
+  background-color: rgb(26, 25, 25);
+}
+
+.description {
+  grid-area: c;
+  width: 540px;
+  height: 110px;
+  background-color: rgb(36, 36, 36);
+}
+
+@media screen and (max-width: 1085px) {
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+  }
+}
