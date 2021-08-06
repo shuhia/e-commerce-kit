@@ -1,8 +1,11 @@
 import React from "react";
 import "./app.css";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Redirect } from "react-router";
 
 import Layout from "./components/layout/Layout";
+import Breadcrumb from "./components/business/Breadcrumb";
 
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
@@ -13,12 +16,10 @@ import Discover from "./pages/Discover";
 import Details from "./pages/Details";
 import Shipping from "./pages/Shipping";
 import Payment from "./pages/Payment";
-import { Redirect } from "react-router";
 
 import CartProvider from "./contexts/cart/CartProvider";
 import StoreProvider from "./contexts/store/StoreProvider";
 import CustomerProvider from "./contexts/customer/CustomerProvider";
-import Breadcrumb from "./components/business/Breadcrumb";
 
 function App() {
   const path = "/checkout";
