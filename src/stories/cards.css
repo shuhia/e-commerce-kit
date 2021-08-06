@@ -1,0 +1,17 @@
+.cards {
+  background-color: blue;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-between;
+}
+
+.col {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgb(89, 89, 255);
+  align-items: center;
+}
+
+img {
+  background-color: rgb(133, 133, 248);
+}
