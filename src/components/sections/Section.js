@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import "./section.css";
 import styles from "./section.module.css";
 
 function Section(props) {

@@ -1,0 +1,6 @@
+.container {
+  background-color: rgba(86, 178, 128, 0.1);
+  min-height: 100%;
+  padding: 5%;
+  flex-direction: column;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import TestimonialCard from "../cards/TestimonialCard";
 import Section from "./Section";
+import styles from "./testimonials.module.css";
 
 function Testimonials() {
   return (

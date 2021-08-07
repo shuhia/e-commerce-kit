@@ -2,6 +2,7 @@ import React from "react";
 import Section from "./Section";
 import Button from "../buttons/Button";
 import imgCandles from "../../images/candles.png";
+import styles from "./benefits.module.css";
 
 function Benefits() {
   return (
@@ -14,7 +15,7 @@ function Benefits() {
       <aside>
         <img className="benefits-candles" src={imgCandles}></img>
       </aside>
-      <ul>
+      <ul className={styles.list}>
         <li>
           <b>Eco-sustainable:</b> All recyclable materials, 0% CO2 emissions
         </li>
