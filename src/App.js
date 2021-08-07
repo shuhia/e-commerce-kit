@@ -29,7 +29,6 @@ function App() {
     { name: "shipping", href: path + "/shipping" },
     { name: "payment", href: path + "/payment" },
   ];
-  const breadCrumb = <Breadcrumb pages={pages}></Breadcrumb>;
 
   return (
     <>
@@ -42,23 +41,19 @@ function App() {
                   <Route exact path="/product" component={Product}></Route>
                   <Route exact path="/discover" component={Discover}></Route>
                   <Route exact path="/cart" component={Cart}></Route>
-                  <Route
-                    exact
-                    path="/components"
-                    component={Components}
-                  ></Route>
                   <Route exact path="/about" component={About}></Route>
+                  <Route exact path="/components" component={Components} />
                   <Route exact path="/" component={Home}></Route>
                   <Route exact path={"/checkout/details"}>
-                    {breadCrumb}
+                    <Breadcrumb pages={pages}> </Breadcrumb>
                     <Details></Details>
                   </Route>
                   <Route exact path={"/checkout/shipping"}>
-                    {breadCrumb}
+                    <Breadcrumb pages={pages}> </Breadcrumb>
                     <Shipping></Shipping>
                   </Route>
                   <Route exact path={"/checkout/payment"}>
-                    {breadCrumb}
+                    <Breadcrumb pages={pages}> </Breadcrumb>
                     <Payment></Payment>
                   </Route>
                   <Route exact path={"/checkout"}>
