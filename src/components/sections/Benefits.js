@@ -1,7 +1,8 @@
 import React from "react";
 import Section from "./Section";
 import Button from "../buttons/Button";
-import imgCandles from "../../images/candles.png";
+import productSet from "../assets/products/product-set-1.png";
+import checkMark from "../assets/icons/checkmark.svg";
 import styles from "./benefits.module.css";
 
 function Benefits() {
@@ -13,7 +14,12 @@ function Benefits() {
       content={<></>}
     >
       <aside>
-        <img className="benefits-candles" src={imgCandles}></img>
+        <img
+          className="benefits-candles"
+          styles={{ listStyle: { checkMark } }}
+          src={productSet}
+          alt="product-set-1"
+        ></img>
       </aside>
       <ul className={styles.list}>
         <li>

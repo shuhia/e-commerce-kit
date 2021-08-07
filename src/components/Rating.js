@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as Star } from "../images/star_black_24dp.svg";
-import { ReactComponent as StarBorder } from "../images/star_border_black_24dp.svg";
+import { ReactComponent as Star } from "./assets/icons/star_black_24dp.svg";
+import { ReactComponent as StarBorder } from "./assets/icons/star_border_black_24dp.svg";
 
 function Rating(props) {
   const { rating, maxRating = 5, color = "black" } = props;

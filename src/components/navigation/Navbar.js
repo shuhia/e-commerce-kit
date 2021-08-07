@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import NavItem from "./NavItem";
-import logo from "../../images/logo.svg";
-import menu from "../../images/menu.svg";
-import closeMenu from "../../images/clear-menu.svg";
+import logo from "../assets/icons/logo.svg";
+import menu from "../assets/icons/menu.svg";
+import closeMenu from "../assets/icons/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import CartItem from "../business/CartItem";

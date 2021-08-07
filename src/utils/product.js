@@ -1,6 +1,6 @@
 import { randomNumber } from "./utils";
 import { v4 as uuidv4 } from "uuid";
-import productImage from "../images/product-1.png";
+import productImage from "../components/assets/products/product-1.png";
 
 /**
  * Summary: Creates a random product.

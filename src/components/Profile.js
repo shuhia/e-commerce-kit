@@ -1,5 +1,5 @@
 import React from "react";
-import defaultProfileImg from "../images/testimonial-bg.png";
+import defaultProfileImg from "./assets/profiles/profile-1.png";
 
 function Profile({ img = defaultProfileImg, width = 84, height = 84 }) {
   return (

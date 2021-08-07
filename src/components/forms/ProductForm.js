@@ -1,7 +1,7 @@
 import React from "react";
 import Quantity from "../business/Quantity";
 import LinkButton from "../buttons/LinkButton";
-import { ReactComponent as Cart } from "../../images/cart.svg";
+import { ReactComponent as Cart } from "../assets/icons/cart.svg";
 import { randomProduct } from "../../utils/product";
 
 function ProductForm(props) {

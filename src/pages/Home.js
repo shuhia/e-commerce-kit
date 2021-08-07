@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/sections/Header";
 
-import candlesImage from "../images/candles.png";
 import Benefits from "../components/sections/Benefits";
 import Testimonials from "../components/sections/Testimonials";
 
@@ -16,7 +15,7 @@ function Home() {
     <>
       <Header></Header>
       <Products products={products}></Products>
-      <Benefits candlesImage={candlesImage}></Benefits>
+      <Benefits></Benefits>
       <Testimonials></Testimonials>
       <Featured></Featured>
     </>

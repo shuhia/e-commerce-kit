@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Quantity from "../components/business/Quantity";
 import styles from "./product.module.css";
-import cartIcon from "../images/cart.svg";
 import { v4 as uuidv4 } from "uuid";
 import { useMediaQuery } from "react-responsive";
 import useCartContext from "../contexts/cart/useCartContext";
 import useCustomerContext from "../contexts/customer/useCustomerContext";
 import useStoreContext from "../contexts/store/useStoreContext";
 import { randomProduct } from "../utils/utils";
+import CartButton from "../components/buttons/CartButton";
 
 function Product() {
   const { selectedProduct = randomProduct() } = useCustomerContext();
@@ -92,10 +92,7 @@ function Product() {
               </p>
             </div>
           </fieldset>
-          <button type="submit" className={styles.submit}>
-            <img src={cartIcon} />
-            <span>+ Add to cart</span>
-          </button>
+          <CartButton name="+ Add to cart"></CartButton>
         </form>
         <ol className={styles.facts}>
           {facts.map((fact) => (
@@ -144,10 +141,7 @@ function Product() {
             </p>
           </div>
         </fieldset>
-        <button type="submit" className={styles.submit}>
-          <img src={cartIcon} />
-          <span>+ Add to cart</span>
-        </button>
+        <CartButton name="+ Add to cart"></CartButton>
       </form>
 
       <ol className={styles.facts}>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import cartSvg from "../../images/cart.svg";
+import cartSvg from "../assets/icons/cart.svg";
 import styles from "./cartItem.module.css";
 import useCartContext from "../../contexts/cart/useCartContext";
 

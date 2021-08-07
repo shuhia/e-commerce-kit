@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./dropdown.module.css";
-import arrow from "../../images/keyboard_arrow_down_black_24dp.svg";
+import arrow from "../assets/icons/keyboard_arrow_down_black_24dp.svg";
 
 function Dropdown({
   size = "large",

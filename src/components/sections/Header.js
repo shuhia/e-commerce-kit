@@ -1,8 +1,7 @@
 import React from "react";
-import BackgroundCard from "../cards/BackgroundCard";
 import styles from "./header.module.css";
-import bgImageMobile from "../../images/bg-image-mobile.png";
-import bgImage from "../../images/bg-image.jpg";
+import bgImageMobile from "../assets/background/bg-image-mobile.png";
+import bgImage from "../assets/background/bg-image-desktop.jpg";
 import LinkButton from "../buttons/LinkButton";
 import { useMediaQuery } from "react-responsive";
 

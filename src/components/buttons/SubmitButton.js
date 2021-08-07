@@ -1,9 +1,8 @@
 import React from "react";
 
 import styles from "./button.module.css";
-import { Link } from "react-router-dom";
 
-function SubmitButton({ name, formId, size = "big", onClick }) {
+function SubmitButton({ name, formId, size = "large", onClick, ...rest }) {
   return (
     <>
       <button
@@ -12,6 +11,7 @@ function SubmitButton({ name, formId, size = "big", onClick }) {
         className={styles[size]}
         onClick={onClick}
       >
+        {rest.children}
         <span>{name}</span>
       </button>
     </>
