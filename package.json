@@ -25,7 +25,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run storybook\""
   },
   "eslintConfig": {
     "extends": [
