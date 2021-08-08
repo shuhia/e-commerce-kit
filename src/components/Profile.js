@@ -1,7 +1,12 @@
 import React from "react";
 import defaultProfileImg from "./assets/profiles/profile-1.png";
 
-function Profile({ img = defaultProfileImg, width = 84, height = 84 }) {
+function Profile({
+  img = defaultProfileImg,
+  width = 84,
+  height = 84,
+  name = "name",
+}) {
   return (
     <div className="profile">
       <img
@@ -13,13 +18,13 @@ function Profile({ img = defaultProfileImg, width = 84, height = 84 }) {
         }}
         className="profile-img"
         src={img}
-        alt="profile-image"
+        alt={name}
       />
     </div>
   );
 }
 
-function ProfileIcon({ img = defaultProfileImg }) {
+function ProfileIcon({ img = defaultProfileImg, name = "name" }) {
   <div className="profile">
     <img
       style={{
@@ -30,7 +35,7 @@ function ProfileIcon({ img = defaultProfileImg }) {
       }}
       className="profile-img"
       src={img}
-      alt="profile-image"
+      alt={name}
     />
   </div>;
 }

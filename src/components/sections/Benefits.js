@@ -15,12 +15,7 @@ function Benefits() {
       styles={styles}
     >
       <aside>
-        <img
-          className="benefits-candles"
-          styles={{ listStyle: { checkMark } }}
-          src={productSet}
-          alt="product-set-1"
-        ></img>
+        <img className={styles.img} src={productSet} alt="product-set-1"></img>
       </aside>
       <ul className={styles.list}>
         <li>

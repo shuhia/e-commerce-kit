@@ -5,4 +5,5 @@
 .list {
   text-align: left;
   max-width: 50%;
+  list-style: url("../assets/icons/checkmark.svg");
 }
