@@ -1,6 +1,6 @@
 import React from "react";
 import Quantity from "./Quantity";
-import productImg from "../assets/products/product-1.png";
+import productImg from "../assets/products/juicy-lemon.png";
 import LinkButton from "../buttons/LinkButton";
 
 import styles from "./subscription.module.css";

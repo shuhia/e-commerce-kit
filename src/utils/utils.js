@@ -4,8 +4,12 @@ function replaceItemIn(array, newItem) {
   return array.map((prev) => (prev.id === newItem.id ? newItem : prev));
 }
 
-function generateRandomNumber(min = 0, max = 10) {
+function generateRandomNumberBetween(min = 0, max = 10) {
   return min + Math.floor(Math.random() * max + 1);
+}
+
+function generateRandomNumber(max = 10) {
+  return Math.floor(Math.random() * max + 1);
 }
 
 function getRandomElement(array) {
