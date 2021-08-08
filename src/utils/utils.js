@@ -1,4 +1,18 @@
 import { generateRandomProduct, generateRandomProducts } from "./product";
+import faker from "faker";
+
+function getRandomTestimonial() {
+  return {
+    image: faker.image.avatar(),
+    rating: generateRandomNumber(5),
+    comment: faker.lorem.sentence(),
+    name: getRandomName(),
+  };
+}
+
+function getRandomName() {
+  return faker.name.findName();
+}
 
 function replaceItemIn(array, newItem) {
   return array.map((prev) => (prev.id === newItem.id ? newItem : prev));
@@ -23,4 +37,7 @@ export {
   generateRandomProducts,
   replaceItemIn,
   getRandomElement,
+  getRandomName,
+  generateRandomNumberBetween,
+  getRandomTestimonial,
 };

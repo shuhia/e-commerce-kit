@@ -1,18 +1,21 @@
 import React from "react";
+import { generateRandomNumber, getRandomName } from "../../utils/utils";
 import Profile from "../Profile";
 import Rating from "../Rating";
 import styles from "./card.module.css";
+import { getRandomTestimonial } from "../../utils/utils";
 
-const TestimonialCard = ({
-  image,
-  rating = 5,
-  comment = "“I love it! No more air fresheners”",
-  name = "Luisa",
-}) => {
+const TestimonialCard = () => {
+  const {
+    image,
+    rating = generateRandomNumber(5),
+    comment = "“I love it! No more air fresheners”",
+    name = getRandomName(),
+  } = getRandomTestimonial();
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Profile></Profile>
+        <Profile img={image}></Profile>
       </div>
       <div className={styles.rating}>
         <Rating rating={rating}></Rating>

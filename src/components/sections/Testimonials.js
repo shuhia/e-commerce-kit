@@ -8,7 +8,8 @@ function Testimonials() {
     <Section
       id="testimonials"
       title="Testimonials"
-      description="Some quotes from our happy customers"
+      description="Some quotes from our
+      happy customers"
     >
       <div
         className="carusell"
@@ -20,6 +21,12 @@ function Testimonials() {
           overflowY: "none",
         }}
       >
+        <TestimonialCard></TestimonialCard>
+        <TestimonialCard></TestimonialCard>
+        <TestimonialCard></TestimonialCard>
+        <TestimonialCard></TestimonialCard>
+        <TestimonialCard></TestimonialCard>
+        <TestimonialCard></TestimonialCard>
         <TestimonialCard></TestimonialCard>
         <TestimonialCard></TestimonialCard>
         <TestimonialCard></TestimonialCard>
