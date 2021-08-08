@@ -20,10 +20,8 @@ const TestimonialCard = () => {
       <div className={styles.rating}>
         <Rating rating={rating}></Rating>
       </div>
-      <div className={styles.comment}>
-        <b>{comment}</b>
-      </div>
-      <div className={styles.name}>{name}</div>
+      <div className={styles.comment}>{comment}</div>
+      <b className={styles.name}>{name}</b>
     </div>
   );
 };
