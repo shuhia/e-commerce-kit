@@ -10,6 +10,7 @@ function Testimonials() {
       title="Testimonials"
       description="Some quotes from our
       happy customers"
+      styles={styles}
     >
       <div
         className="carusell"

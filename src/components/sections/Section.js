@@ -8,9 +8,14 @@ function Section(props) {
     title = "title",
     description = "description",
     content,
+    background,
   } = props;
+
   return (
-    <section id={"section-" + id} className={styles.container}>
+    <section
+      id={"section-" + id}
+      className={styles.container + " " + props.styles?.container}
+    >
       <a href="#test" id={id}></a>
       <header className={styles.header}>
         <h1>{title}</h1>

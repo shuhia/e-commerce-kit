@@ -12,6 +12,7 @@ function Benefits() {
       title="Clean and fragrant soy wax"
       description="Made for your home and for your wellness"
       content={<></>}
+      styles={styles}
     >
       <aside>
         <img
