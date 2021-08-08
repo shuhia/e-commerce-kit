@@ -1,6 +1,11 @@
-import { randomNumber } from "./utils";
+import { generateRandomNumber } from "./utils";
 import { v4 as uuidv4 } from "uuid";
-import productImage from "../components/assets/products/product-1.png";
+import productImage1 from "../components/assets/products/product-1.png";
+import productImage2 from "../components/assets/products/product-2.png";
+import productImage3 from "../components/assets/products/product-3.png";
+import productImage4 from "../components/assets/products/product-4.png";
+import productImage5 from "../components/assets/products/product-5.png";
+import productImage6 from "../components/assets/products/product-6.png";
 
 /**
  * Summary: Creates a random product.
@@ -17,12 +22,12 @@ import productImage from "../components/assets/products/product-1.png";
  * @returns {Object} Object with this format: {name, id, img, price, getPrice, quantity, options}.
  */
 
-function randomProduct(
+function generateRandomProduct(
   name = "Spiced Mint Candleaf ®",
   id = uuidv4(),
-  img = productImage,
+  img = productImage1,
   price = {
-    value: randomNumber(),
+    value: generateRandomNumber(),
     currency: "$",
   },
   getPrice = function () {
@@ -47,10 +52,10 @@ function randomProduct(
  * @param {Number} amount of products.
  * @returns {Array} amount products in array.
  */
-function randomProducts(amount) {
+function generateRandomProducts(amount) {
   return Array(amount)
     .fill("product")
-    .map(() => randomProduct());
+    .map(() => generateRandomProduct());
 }
 
-export { randomProduct, randomProducts };
+export { generateRandomProduct, generateRandomProducts };

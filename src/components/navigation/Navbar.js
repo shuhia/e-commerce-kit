@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import NavItem from "./NavItem";
-import logo from "../assets/icons/logo.svg";
+import logo from "../assets/logo/logo.svg";
 import menu from "../assets/icons/menu.svg";
 import closeMenu from "../assets/icons/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";

@@ -2,14 +2,14 @@ import React from "react";
 import Quantity from "../business/Quantity";
 import LinkButton from "../buttons/LinkButton";
 import { ReactComponent as Cart } from "../assets/icons/cart.svg";
-import { randomProduct } from "../../utils/product";
+import { generateRandomProduct } from "../../utils/product";
 
 function ProductForm(props) {
   // Default values if props is undefined
   const { title = "Form" } = props;
 
   // Create a random product
-  const product = randomProduct();
+  const product = generateRandomProduct();
   const { name, id, img, price, getPrice, quantity, options } = product;
 
   function handleSubmit(e) {

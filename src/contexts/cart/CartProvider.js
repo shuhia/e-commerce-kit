@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 import CartContext from "./CartContext";
-import { randomProducts, randomProduct } from "../../utils/utils";
+import {
+  generateRandomProducts,
+  generateRandomProduct,
+} from "../../utils/utils";
 
 function CartProvider(props) {
-  const [cart, setCart] = useState({ owner: "", items: randomProducts(4) });
+  const [cart, setCart] = useState({
+    owner: "",
+    items: generateRandomProducts(4),
+  });
   const items = cart.items;
   const [count, setCount] = useState(cart.items.length);
 

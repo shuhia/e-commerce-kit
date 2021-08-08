@@ -3,10 +3,10 @@ import Card from "./Card";
 
 import { useHistory } from "react-router-dom";
 import useCustomerContext from "../../contexts/customer/useCustomerContext";
-import { randomProduct } from "../../utils/product";
+import { generateRandomProduct } from "../../utils/product";
 import styles from "./card.module.css";
 
-function ProductCard({ product = randomProduct() }) {
+function ProductCard({ product = generateRandomProduct() }) {
   const { price } = product;
   const history = useHistory();
   const { setSelectedProduct } = useCustomerContext();
