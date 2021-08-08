@@ -32,7 +32,7 @@ function Quantity(props) {
           className={styles.button}
           onClick={() => dispatch({ type: "decrease" })}
         >
-          <b>-</b>
+          -
         </span>
         <label></label>
         <input
@@ -47,7 +47,7 @@ function Quantity(props) {
           className={styles.button}
           onClick={() => dispatch({ type: "increase" })}
         >
-          <b>+</b>
+          +
         </span>
       </div>
     </span>

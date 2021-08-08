@@ -5,10 +5,9 @@
 }
 
 .controller {
-  display: "flex";
-  justify-content: "center";
-  align-items: "center";
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border: 1px solid green;
   padding: 2px 5px;
@@ -20,13 +19,12 @@
   max-width: 4ch;
   padding: 0 5px;
   margin: 3px;
-
   text-align: center;
   border: none;
 }
 
 .button {
-  width: 10px;
+  min-width: 10px;
   text-align: center;
   background-color: white;
   color: green;
@@ -34,6 +32,7 @@
   padding: 0 10px;
   padding-bottom: 2px;
   margin: 0 5px;
+  font-weight: bold;
 }
 .button:hover {
   background-color: rgb(230, 230, 230);
