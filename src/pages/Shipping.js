@@ -41,8 +41,23 @@ function ControlledInput(props) {
 
 function Shipping() {
   return (
-    <section>
-      <form>
+    <section
+      style={{
+        display: "grid",
+        justifyContent: "center",
+        gridTemplateColumns: "1fr 1fr",
+        padding: " 20px 0",
+      }}
+    >
+      <form
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexFlow: "column",
+          padding: "20px",
+        }}
+      >
         <div
           style={{
             display: "flex",

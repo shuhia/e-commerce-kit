@@ -47,14 +47,14 @@ function Product() {
 
   const desktop = (
     <section className={styles.container}>
-      <div>
+      <figure>
         <img className={styles.img} src={img} alt="product" />
-        <div>
+        <figcaption>
           All hand-made with natural soy wax, Candleaf is made htmlFor your
           pleasure moments
-        </div>
-        <div>🚚 FREE SHIPPING</div>
-      </div>
+        </figcaption>
+      </figure>
+
       <div>
         <form id="order" className={styles.form} onSubmit={handleSubmit}>
           <h1 className={styles.title}>{name}</h1>
@@ -102,6 +102,7 @@ function Product() {
           ))}
         </ol>
       </div>
+      <div>🚚 FREE SHIPPING</div>
     </section>
   );
 

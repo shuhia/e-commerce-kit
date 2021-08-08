@@ -31,6 +31,10 @@ function getRandomElement(array) {
   return array[generateRandomNumber(length - 1)];
 }
 
+function* generatorFunction(array) {
+  yield 5;
+}
+
 export {
   generateRandomNumber,
   generateRandomProduct,

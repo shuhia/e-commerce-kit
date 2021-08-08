@@ -27,14 +27,7 @@ function Quantity(props) {
 
   return (
     <span className={styles.container}>
-      <div
-        className={styles.controller}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className={styles.controller}>
         <span
           className={styles.button}
           onClick={() => dispatch({ type: "decrease" })}

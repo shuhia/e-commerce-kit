@@ -1,11 +1,14 @@
 .container {
   max-height: 61px;
   max-width: 200px;
-  text-align: center;
   margin: auto;
 }
 
 .controller {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+
   text-align: center;
   border: 1px solid green;
   padding: 2px 5px;
@@ -17,20 +20,21 @@
   max-width: 4ch;
   padding: 0 5px;
   margin: 3px;
+
   text-align: center;
   border: none;
 }
 
 .button {
-  width: 25px;
+  width: 10px;
   text-align: center;
   background-color: white;
   color: green;
   border: 0;
-  padding: 0;
+  padding: 0 10px;
   padding-bottom: 2px;
+  margin: 0 5px;
 }
 .button:hover {
-  cursor: default;
   background-color: rgb(230, 230, 230);
 }

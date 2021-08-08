@@ -8,10 +8,14 @@ import Dropdown from "../components/business/Dropdown";
 import Order from "../components/sections/Order";
 import Section from "../components/sections/Section";
 
+import faker from "faker";
+
 function Inputs(props) {
   return (
     <>
-      <div style={{ display: "flex" }}>{props.children}</div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {props.children}
+      </div>
     </>
   );
 }
@@ -51,7 +55,9 @@ function Details() {
             id="country"
             for="details"
             label="country"
-            options={["italy"]}
+            options={Array(5)
+              .fill(0)
+              .map(() => faker.address.country())}
           >
             <option value="italy" label="country">
               italy
@@ -101,7 +107,9 @@ function Details() {
         id="country"
         for="details"
         label="country"
-        options={["italy"]}
+        options={Array(5)
+          .fill(0)
+          .map(() => faker.address.country())}
       ></Dropdown>
       <input type="checkbox"></input>
       <label for="save">

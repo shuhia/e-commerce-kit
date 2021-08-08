@@ -1,11 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./dropdown.module.css";
 import arrow from "../assets/icons/keyboard_arrow_down_black_24dp.svg";
+import faker from "faker";
 
 function Dropdown({
   size = "large",
   label = "label",
-  options = ["test1", "test2", "test3"],
+  options = [
+    Array(5)
+      .fill(0)
+      .map(() => faker.address.country()),
+  ],
 }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);

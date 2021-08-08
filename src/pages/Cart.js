@@ -30,6 +30,8 @@ function ProductData({ product, removeProduct, updateProduct, isDektop }) {
     <>
       <td className={styles.product}>
         <img className={styles.img} src={img} alt={product.name}></img>
+      </td>
+      <td>
         <div>
           <Link to="/product">
             <h4>{name}</h4>
@@ -77,9 +79,8 @@ function Cart(props) {
     <table className={styles.table}>
       <thead>
         <tr>
-          <th colSpan="1" style={{ textAlign: "left" }}>
-            Product
-          </th>
+          <th colSpan="1">Product</th>
+          <th colSpan="1"></th>
           <th colSpan="1">Price </th>
           <th colSpan="1">Quantity</th>
           <th colSpan="1">Total</th>

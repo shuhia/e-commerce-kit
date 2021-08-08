@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "../buttons/Button";
 import SubmitButton from "../buttons/SubmitButton";
 import { Link } from "react-router-dom";
+import styles from "./paymentForm.module.css";
 
 const InputGroup = ({ legend = "Payment method", ...rest }) => {
   return (
@@ -52,7 +53,7 @@ const PaymentForm = () => {
   return (
     <>
       {!paid ? (
-        <form id="payment">
+        <form id="payment" className={styles.container}>
           <div className="summary"></div>
           <InputGroup legend="Payment method">
             <input name="cardNr" placeholder="Card Number" required></input>
@@ -103,7 +104,7 @@ const PaymentForm = () => {
           <Link to="checkout/shipping">"Back to shipping"</Link>
         </form>
       ) : (
-        <div>
+        <div className={styles.paid}>
           <svg
             width="100"
             height="100"
