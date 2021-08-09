@@ -1,12 +1,12 @@
 import SubmitButton from "./SubmitButton";
-import { ReactComponent as cartSvg } from "../assets/icons/cart.svg";
+import { ReactComponent as Cart } from "../assets/icons/cart.svg";
 
 import React from "react";
 
 function CartButton(props) {
   return (
     <SubmitButton {...props}>
-      <cartSvg></cartSvg>
+      <Cart></Cart>
     </SubmitButton>
   );
 }

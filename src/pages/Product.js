@@ -8,6 +8,7 @@ import useCustomerContext from "../contexts/customer/useCustomerContext";
 import useStoreContext from "../contexts/store/useStoreContext";
 import { generateRandomProduct } from "../utils/utils";
 import CartButton from "../components/buttons/CartButton";
+import LinkButton from "../components/buttons/LinkButton";
 
 function Product() {
   const { selectedProduct = generateRandomProduct() } = useCustomerContext();
@@ -92,7 +93,10 @@ function Product() {
               </p>
             </div>
           </fieldset>
-          <CartButton name="+ Add to cart"></CartButton>
+          <div className={styles.buttons}>
+            <CartButton name="+ Add to cart"></CartButton>
+            <LinkButton name="Checkout" href="/checkout"></LinkButton>
+          </div>
         </form>
         <ol className={styles.facts}>
           {facts.map((fact) => (
@@ -142,7 +146,10 @@ function Product() {
             </p>
           </div>
         </fieldset>
-        <CartButton name="+ Add to cart"></CartButton>
+        <div className={styles.buttons}>
+          <CartButton name="+ Add to cart"></CartButton>
+          <LinkButton name="Checkout" href="/checkout"></LinkButton>
+        </div>
       </form>
 
       <ol className={styles.facts}>
