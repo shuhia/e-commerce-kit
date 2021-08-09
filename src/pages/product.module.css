@@ -1,76 +1,151 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   text-align: center;
-}
-
-.img {
-  min-width: 346px;
-  min-height: 277.44px;
-  margin: auto;
 }
 
 .form {
-  padding: 50px;
-}
-
-.amount {
   display: flex;
-  margin: 10px;
-  align-items: center;
-}
-
-.price {
-  color: green;
-  font-size: bold;
-}
-
-.subscription {
-  border: 1px solid grey;
-  border-radius: 5px;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.subscription label {
-  margin: 5px;
-}
-
-.subscription p {
-  max-width: 400px;
-  margin: auto;
-}
-
-.facts {
-  border: 1px solid grey;
-  border-radius: 5px;
-  text-align: left;
-  list-style: none;
-  width: 349px;
-  padding: 10px;
-  list-style: none;
-  margin: auto;
-}
-
-.facts li {
-  text-decoration: none;
-}
-
-.submit {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 350px;
-  height: 42px;
-  border-radius: 4px;
-  margin: 10px auto;
-  background-color: var(--color1);
+  align-items: center;
+  gap: 20px;
+}
+
+.form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.form fieldset input {
+  margin: 10px;
+}
+
+.form fieldset select {
+  margin: 0 10px;
+}
+
+.form fieldset div:last-child {
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .buttons {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 10px;
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .title {
+    grid-column: 2/2;
+    text-align: left;
+  }
+  .container footer {
+    grid-column: 1/1;
+    grid-row: 3/3;
+  }
+
+  .facts {
+    grid-column: 2/2;
+  }
+
+  .img {
+    min-width: 346px;
+    min-height: 277.44px;
+    margin: auto;
+    grid-column: 1/1;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .amount {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    grid-column: 1/1;
+  }
+
+  .price {
+    color: green;
+    font-size: bold;
+  }
+
+  .subscription {
+    text-align: center;
+    margin: 10px 0;
+    grid-column: 2/2;
+    width: 350px;
+  }
+
+  .weeks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subscription label {
+    margin: 5px;
+  }
+
+  .subscription p {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .facts {
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: left;
+    list-style: none;
+
+    width: 349px;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .facts li {
+    text-decoration: none;
+  }
+
+  .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 42px;
+    border-radius: 4px;
+    margin: 10px auto;
+    background-color: var(--color1);
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-column: 2/2;
+  }
 }

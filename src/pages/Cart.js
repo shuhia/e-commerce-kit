@@ -6,11 +6,13 @@ import LinkButton from "../components/buttons/LinkButton";
 import { useMediaQuery } from "react-responsive";
 import useCartContext from "../contexts/cart/useCartContext";
 import Section from "../components/sections/Section";
+import useCustomerContext from "../contexts/customer/useCustomerContext";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   const { name, price, img, id } = product;
   const [quantity, setQuantity] = useState(product.quantity);
   const [total, setTotal] = useState(price.value * quantity + price.currency);
+  const { setSelectedProduct } = useCustomerContext();
   useEffect(() => {
     setTotal(price.value * quantity + price.currency);
     const newProduct = { ...product, quantity };
@@ -33,7 +35,7 @@ function ProductData({ product, removeProduct, updateProduct, isDektop }) {
       </td>
       <td>
         <div>
-          <Link to="/product">
+          <Link to="/product" onClick={() => setSelectedProduct(product)}>
             <h4>{name}</h4>
           </Link>
           <div className={styles.remove} onClick={() => removeProduct(id)}>
