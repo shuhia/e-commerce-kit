@@ -12,13 +12,14 @@ import LinkButton from "../components/buttons/LinkButton";
 
 function Product() {
   const { selectedProduct = generateRandomProduct() } = useCustomerContext();
+
   const product = selectedProduct;
 
-  const isDesktop = useMediaQuery({ minWidth: 800 });
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
   }, []);
+
   const { addItem } = useCartContext();
 
   const { name, id, img, price } = product;
@@ -46,58 +47,57 @@ function Product() {
 
   const [quantity, setAmount] = useState(1);
 
-  const desktop = (
-    <section className={styles.container}>
-      <figure>
+  return (
+    <>
+      <section className={styles.container}>
+        <h1 className={styles.title}>{name}</h1>
         <img className={styles.img} src={img} alt="product" />
-        <figcaption>
-          All hand-made with natural soy wax, Candleaf is made htmlFor your
-          pleasure moments
-        </figcaption>
-      </figure>
 
-      <div>
         <form id="order" className={styles.form} onSubmit={handleSubmit}>
-          <h1 className={styles.title}>{name}</h1>
-
-          <div className={styles.amount} style={{ display: "flex" }}>
+          <div className={styles.amount}>
             <span className={styles.price}>{price.value + price.currency}</span>
             <Quantity value={quantity} setValue={setAmount}></Quantity>
           </div>
           <fieldset className={styles.subscription}>
-            <input
-              id="oneTime"
-              htmlFor="order"
-              name="time"
-              type="radio"
-              defaultChecked
-            ></input>
-            <label for="oneTime">One time purchase</label>
             <div>
               <input
-                id="weeks"
+                id="oneTime"
                 htmlFor="order"
-                type="radio"
                 name="time"
+                type="radio"
+                defaultChecked
               ></input>
-              <label for="weeks">Subscribe and deliver every</label>
-              <select id="amount" name="amount" for="order">
-                <option value={4}>4 weeks</option>
-                <option value={3}>3 weeks</option>
-                <option value={2}>2 weeks</option>
-                <option value={1}>1 weeks</option>
-              </select>
+              <label for="oneTime">One time purchase</label>
+            </div>
+            <div>
+              <div className={styles.weeks}>
+                <input
+                  id="weeks"
+                  htmlFor="order"
+                  type="radio"
+                  name="time"
+                ></input>
+                <label for="weeks">Subscribe and deliver every</label>
+                <select id="amount" name="amount" for="order">
+                  <option value={4}>4 weeks</option>
+                  <option value={3}>3 weeks</option>
+                  <option value={2}>2 weeks</option>
+                  <option value={1}>1 weeks</option>
+                </select>
+              </div>
               <p>
                 Subscribe now and get the 10% of discount on every recurring
                 order. The discount will be applied at checkout.
               </p>
             </div>
           </fieldset>
+
           <div className={styles.buttons}>
             <CartButton name="+ Add to cart"></CartButton>
             <LinkButton name="Checkout" href="/checkout"></LinkButton>
           </div>
         </form>
+
         <ol className={styles.facts}>
           {facts.map((fact) => (
             <li>
@@ -105,72 +105,17 @@ function Product() {
             </li>
           ))}
         </ol>
-      </div>
-      <div>🚚 FREE SHIPPING</div>
-    </section>
-  );
 
-  const mobile = (
-    <section className={styles.container}>
-      <h1 className={styles.title}>{name}</h1>
-      <img className={styles.img} src={img} alt="product" />
-
-      <form id="order" className={styles.form} onSubmit={handleSubmit}>
-        <div>
-          <div className={styles.amount}>
-            <span className={styles.price}>{price.value + price.currency}</span>
-            <Quantity value={quantity} setValue={setAmount}></Quantity>
-          </div>
-        </div>
-        <fieldset className={styles.subscription}>
-          <input
-            id="oneTime"
-            htmlFor="order"
-            name="time"
-            type="radio"
-            defaultChecked
-          ></input>
-          <label for="oneTime">One time purchase</label>
+        <footer>
           <div>
-            <input id="weeks" htmlFor="order" type="radio" name="time"></input>
-            <label for="weeks">Subscribe and deliver every</label>
-            <select id="amount" name="amount" for="order">
-              <option value={4}>4 weeks</option>
-              <option value={3}>3 weeks</option>
-              <option value={2}>2 weeks</option>
-              <option value={1}>1 weeks</option>
-            </select>
-            <p>
-              Subscribe now and get the 10% of discount on every recurring
-              order. The discount will be applied at checkout.
-            </p>
+            All hand-made with natural soy wax, Candleaf is made htmlFor your
+            pleasure moments
           </div>
-        </fieldset>
-        <div className={styles.buttons}>
-          <CartButton name="+ Add to cart"></CartButton>
-          <LinkButton name="Checkout" href="/checkout"></LinkButton>
-        </div>
-      </form>
-
-      <ol className={styles.facts}>
-        {facts.map((fact) => (
-          <li>
-            <b>{fact[0]}</b>: {fact[1]}
-          </li>
-        ))}
-      </ol>
-
-      <footer>
-        <div>
-          All hand-made with natural soy wax, Candleaf is made htmlFor your
-          pleasure moments
-        </div>
-        <div>🚚 FREE SHIPPING</div>
-      </footer>
-    </section>
+          <div>🚚 FREE SHIPPING</div>
+        </footer>
+      </section>
+    </>
   );
-
-  return <>{isDesktop ? desktop : mobile}</>;
 }
 
 export default Product;
