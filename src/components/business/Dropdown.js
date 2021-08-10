@@ -11,11 +11,12 @@ function Dropdown({
       .fill(0)
       .map(() => faker.address.country()),
   ],
+  ...rest
 }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
-  const [selected, setSelected] = useState("province");
+  const [selected, setSelected] = useState(label);
   function select(e) {
     setSelected(options[e.target.id]);
     setOpen(false);
@@ -23,7 +24,7 @@ function Dropdown({
 
   return (
     <div
-      className={styles[size]}
+      className={styles[size] + " " + rest?.styles}
       onMouseEnter={(e) => setActive(true)}
       onMouseLeave={(e) => {
         setActive(false);

@@ -1,11 +1,11 @@
-.large,
-.medium,
 .small,
+.medium,
+.large,
 .mobile {
+  position: relative;
 }
 
 .large {
-  position: relative;
   width: 445px;
   height: 40px;
   border: 1px solid black;
@@ -19,14 +19,12 @@
 }
 
 .small {
-  position: relative;
   width: 140px;
   height: 40px;
   border: 1px solid black;
 }
 
 .mobile {
-  position: relative;
   width: 347px;
   height: 40px;
   border: 1px solid black;
@@ -76,6 +74,7 @@
 }
 .select ol {
   padding: 2px 5px;
+  border: 1px solid white;
 }
 .select ol:hover {
   border: 1px solid grey;
