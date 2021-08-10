@@ -1,10 +1,9 @@
 import React from "react";
-import Card from "./Card";
 
 import { useHistory } from "react-router-dom";
 import useCustomerContext from "../../contexts/customer/useCustomerContext";
 import { generateRandomProduct } from "../../utils/product";
-import styles from "./card.module.css";
+import styles from "./productCard.module.css";
 
 function ProductCard({ product = generateRandomProduct() }) {
   const { price } = product;
@@ -16,7 +15,7 @@ function ProductCard({ product = generateRandomProduct() }) {
     setSelectedProduct(product);
   }
   return (
-    <div className={styles.product} onClick={handleClick}>
+    <div className={styles.container} onClick={handleClick}>
       <img src={product.img} alt={product.name} />
       <div className={styles.description}>
         <h1 className={styles.title}>{product.name}</h1>
