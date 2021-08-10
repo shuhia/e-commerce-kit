@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  color: grey;
+}
+
+.login a {
+  color: green;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 25.6px;
+  font-weight: bold;
+}
+
+.container input,
+.dropdown {
+  margin-bottom: 10px;
+}
+
+.container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.contactFieldset {
+}
+
+.shippingFieldset {
+  margin-bottom: 10;
+}
+
+.container a {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}

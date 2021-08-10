@@ -7,6 +7,7 @@ import Input from "../components/business/Input";
 import Dropdown from "../components/business/Dropdown";
 import Order from "../components/sections/Order";
 import Section from "../components/sections/Section";
+import DetailsForm from "../components/forms/DetailsForm";
 
 import faker from "faker";
 
@@ -80,51 +81,7 @@ function Details() {
     </>
   );
 
-  const mobile = (
-    <form>
-      <fieldset id="contact">
-        <legend>Contact</legend>
-        <Input name="Email or phoneNumber"></Input>
-        <input
-          id="discount"
-          name="discount"
-          type="checkbox"
-          for="details"
-        ></input>
-        <label for="discount">
-          Add me to Candleaf newsletter for a 10% discount
-        </label>
-      </fieldset>
-
-      <Input name="firstname" for="details"></Input>
-      <Input name="lastname" for="details"></Input>
-      <Input name="Adress" for="details"></Input>
-      <Input name="Shipping note" for="details"></Input>
-      <Input name="city" for="details"></Input>
-      <Input name="Postal code" for="details"></Input>
-      <Input name="Province" for="details"></Input>
-      <Dropdown
-        id="country"
-        for="details"
-        label="country"
-        options={Array(5)
-          .fill(0)
-          .map(() => faker.address.country())}
-      ></Dropdown>
-      <input type="checkbox"></input>
-      <label for="save">
-        Save this informations for a future fast checkout
-      </label>
-
-      <div>
-        <Link href="/checkout/cart">Back to cart</Link>
-      </div>
-      <LinkButton
-        name="Go to shipping"
-        href={"/checkout" + "/shipping"}
-      ></LinkButton>
-    </form>
-  );
+  const mobile = <DetailsForm></DetailsForm>;
 
   return (
     <>
