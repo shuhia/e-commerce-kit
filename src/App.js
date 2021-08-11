@@ -20,6 +20,18 @@ import Payment from "./pages/Payment";
 import CartProvider from "./contexts/cart/CartProvider";
 import StoreProvider from "./contexts/store/StoreProvider";
 import CustomerProvider from "./contexts/customer/CustomerProvider";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const path = "/checkout";
@@ -34,35 +46,37 @@ function App() {
     <>
       <Router>
         <StoreProvider>
-          <CustomerProvider>
-            <CartProvider>
+          <CartProvider>
+            <CustomerProvider>
               <Layout>
-                <Switch>
-                  <Route exact path="/product" component={Product}></Route>
-                  <Route exact path="/discover" component={Discover}></Route>
-                  <Route exact path="/cart" component={Cart}></Route>
-                  <Route exact path="/about" component={About}></Route>
-                  <Route exact path="/components" component={Components} />
-                  <Route exact path="/" component={Home}></Route>
-                  <Route exact path={"/checkout/details"}>
-                    <Breadcrumb pages={pages}> </Breadcrumb>
-                    <Details></Details>
-                  </Route>
-                  <Route exact path={"/checkout/shipping"}>
-                    <Breadcrumb pages={pages}> </Breadcrumb>
-                    <Shipping></Shipping>
-                  </Route>
-                  <Route exact path={"/checkout/payment"}>
-                    <Breadcrumb pages={pages}> </Breadcrumb>
-                    <Payment></Payment>
-                  </Route>
-                  <Route exact path={"/checkout"}>
-                    <Redirect exact to={"/checkout/details"}></Redirect>
-                  </Route>
-                </Switch>
+                <ScrollToTop>
+                  <Switch>
+                    <Route exact path="/product" component={Product}></Route>
+                    <Route exact path="/discover" component={Discover}></Route>
+                    <Route exact path="/cart" component={Cart}></Route>
+                    <Route exact path="/about" component={About}></Route>
+                    <Route exact path="/components" component={Components} />
+                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path={"/checkout/details"}>
+                      <Breadcrumb pages={pages}> </Breadcrumb>
+                      <Details></Details>
+                    </Route>
+                    <Route exact path={"/checkout/shipping"}>
+                      <Breadcrumb pages={pages}> </Breadcrumb>
+                      <Shipping></Shipping>
+                    </Route>
+                    <Route exact path={"/checkout/payment"}>
+                      <Breadcrumb pages={pages}> </Breadcrumb>
+                      <Payment></Payment>
+                    </Route>
+                    <Route exact path={"/checkout"}>
+                      <Redirect exact to={"/checkout/details"}></Redirect>
+                    </Route>
+                  </Switch>
+                </ScrollToTop>
               </Layout>
-            </CartProvider>
-          </CustomerProvider>
+            </CustomerProvider>
+          </CartProvider>
         </StoreProvider>
       </Router>
     </>
