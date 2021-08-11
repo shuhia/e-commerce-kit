@@ -11,7 +11,7 @@ import DetailsForm from "../components/forms/DetailsForm";
 
 import faker from "faker";
 
-function Inputs(props) {
+function Group(props) {
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -41,17 +41,17 @@ function Details() {
         </fieldset>
         <fieldset id="shipping">
           <legend>Shipping</legend>
-          <Inputs>
+          <Group>
             <Input name="firstname" size="medium" for="details"></Input>
             <Input name="lastname" size="medium" for="details"></Input>
-          </Inputs>
+          </Group>
           <Input name="Adress" for="details"></Input>
           <Input name="Shipping note" for="details"></Input>
-          <Inputs>
+          <Group>
             <Input name="city" size="small" for="details"></Input>
             <Input name="Postal code" size="small" for="details"></Input>
             <Input name="Province" size="small" for="details"></Input>
-          </Inputs>
+          </Group>
           <Dropdown
             id="country"
             for="details"
@@ -69,13 +69,13 @@ function Details() {
             Save this informations for a future fast checkout
           </label>
         </fieldset>
-        <Inputs>
-          <Link href="/checkout/cart">Back to cart</Link>
+        <Group>
+          <Link to="/cart">Back to cart</Link>
           <LinkButton
             name="Go to shipping"
-            href={"/checkout" + "/shipping"}
+            to={"/checkout" + "/shipping"}
           ></LinkButton>
-        </Inputs>
+        </Group>
       </form>
       <Order></Order>
     </>

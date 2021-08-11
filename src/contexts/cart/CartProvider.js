@@ -46,7 +46,11 @@ function CartProvider(props) {
   }
 
   // Functions
-
+  function emptyCart() {
+    setCart((prev) => {
+      return { ...prev, items: [] };
+    });
+  }
   // Value
   const value = {
     cart,
@@ -57,6 +61,7 @@ function CartProvider(props) {
     updateItem,
     removeItem,
     total,
+    emptyCart,
   };
 
   return (

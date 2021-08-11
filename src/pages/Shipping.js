@@ -104,7 +104,7 @@ function Shipping() {
         </fieldset>
         <LinkButton
           name="Go to payment"
-          href={"/checkout" + "/payment"}
+          to={"/checkout" + "/payment"}
         ></LinkButton>
       </form>
       <Order></Order>

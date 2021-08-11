@@ -4,6 +4,7 @@ import Button from "../buttons/Button";
 import SubmitButton from "../buttons/SubmitButton";
 import { Link } from "react-router-dom";
 import styles from "./paymentForm.module.css";
+import useCustomerContext from "../../contexts/customer/useCustomerContext";
 
 const InputGroup = ({ legend = "Payment method", ...rest }) => {
   return (
@@ -36,6 +37,7 @@ const InputGroupRadioSelection = (props) => {
 };
 
 const PaymentForm = () => {
+  const customer = useCustomerContext();
   const options = [
     "Same as the shipping address",
     "Use a different address for billing",
@@ -46,7 +48,7 @@ const PaymentForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    customer.placeOrder();
     setPaid(true);
   };
 

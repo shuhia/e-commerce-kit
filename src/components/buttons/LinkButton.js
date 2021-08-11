@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import styles from "./button.module.css";
 
 function LinkButton(props) {
-  const { name = "Button", href = "/discover", icon, size = "large" } = props;
+  const { name = "Button", to = "/discover", icon, size = "large" } = props;
   return (
-    <Link to={href} className={styles[size]}>
+    <Link to={to} className={styles[size]}>
       <span className={styles.icon}>{icon}</span>
       <span>{name}</span>
     </Link>

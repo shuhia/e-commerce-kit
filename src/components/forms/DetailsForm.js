@@ -65,7 +65,7 @@ function DetailsForm() {
       <LinkButton
         name="Go to shipping"
         href={"/checkout" + "/shipping"}
-      ></LinkButton>{" "}
+      ></LinkButton>
       <Link href="/checkout/cart">Back to cart</Link>
     </form>
   );

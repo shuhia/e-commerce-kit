@@ -114,7 +114,7 @@ function Cart(props) {
             <div>Tax and shipping cost will be calculated later</div>
           </td>
           <td>
-            <LinkButton name="Checkout" href="/checkout"></LinkButton>
+            <LinkButton name="Checkout" to="/checkout"></LinkButton>
           </td>
         </tr>
       </tfoot>
@@ -154,7 +154,7 @@ function Cart(props) {
               </b>
             </div>
             <div>Tax and shipping cost will be calculated later</div>
-            <LinkButton name="Checkout" href="/checkout"></LinkButton>
+            <LinkButton name="Checkout" to="/checkout"></LinkButton>
           </td>
         </tr>
       </tfoot>

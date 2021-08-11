@@ -94,7 +94,7 @@ function Product() {
 
           <div className={styles.buttons}>
             <CartButton name="+ Add to cart"></CartButton>
-            <LinkButton name="Checkout" href="/checkout"></LinkButton>
+            <LinkButton name="Go to cart" to="/cart"></LinkButton>
           </div>
         </form>
 
