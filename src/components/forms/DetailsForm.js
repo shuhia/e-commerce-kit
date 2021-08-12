@@ -64,9 +64,9 @@ function DetailsForm() {
       </fieldset>
       <LinkButton
         name="Go to shipping"
-        href={"/checkout" + "/shipping"}
+        to={"/checkout" + "/shipping"}
       ></LinkButton>
-      <Link href="/checkout/cart">Back to cart</Link>
+      <Link to="/checkout/cart">Back to cart</Link>
     </form>
   );
 }

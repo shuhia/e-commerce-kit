@@ -81,8 +81,6 @@ function Details() {
     </>
   );
 
-  const mobile = <DetailsForm></DetailsForm>;
-
   return (
     <>
       <section
@@ -94,7 +92,8 @@ function Details() {
           padding: "0 10%",
         }}
       >
-        {isMobile ? mobile : desktop}
+        <DetailsForm></DetailsForm>
+        <Order></Order>
       </section>
     </>
   );
