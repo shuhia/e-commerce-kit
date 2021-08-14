@@ -6,7 +6,7 @@ function LinkButton(props) {
   const { name = "Button", to = "/discover", icon, size = "large" } = props;
   return (
     <Link to={to} className={styles[size]}>
-      <span className={styles.icon}>{icon}</span>
+      {icon && <span className={styles.icon}>{icon}</span>}
       <span>{name}</span>
     </Link>
   );
