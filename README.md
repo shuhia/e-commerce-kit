@@ -4,7 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Design template used in this project: https://www.figma.com/community/file/999496395784541518. 
 
-
+# The application should implement all features that an e-commerce application has
+## Features (To be added) 
 
 ## Available Scripts
 
