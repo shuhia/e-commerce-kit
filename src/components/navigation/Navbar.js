@@ -7,8 +7,9 @@ import closeMenu from "../assets/icons/clear-menu.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import CartItem from "../business/CartItem";
-
 import styles from "./navbar.module.css";
+import { ReactComponent as ProfileSvg } from "../assets/icons/profile.svg";
+import { ReactComponent as CartSvg } from "../assets/icons/cart.svg";
 
 function Navbar({ navItems, cart = <CartItem></CartItem> }) {
   const onMobile = useMediaQuery({ query: "(max-width:800px)" });
@@ -33,18 +34,30 @@ function NavbarDesktop({
       <NavItem name="Discover" href="/discover"></NavItem>
       <NavItem name="About" href="/about"></NavItem>
       <NavItem name="Contact" href="/contact"></NavItem>
-      <NavItem name="Components" href="/components"></NavItem>
+      <NavItem name="test" href="/test"></NavItem>
     </>
   ),
 }) {
   return (
     <nav className={styles.container}>
-      <ul className={styles.desktopItems}>
-        <NavItem>
-          <img className="logo" src={logo}></img>
-        </NavItem>
-        {navItems}
-      </ul>
+      <div className={styles.left}>
+        <img src={logo}></img>
+      </div>
+      <div className={styles.center}>
+        <ul className={styles.desktopItems}>
+          <NavItem name="Discover" href="/discover"></NavItem>
+          <NavItem name="About" href="/about"></NavItem>
+          <NavItem name="Contact" href="/contact"></NavItem>
+        </ul>
+      </div>
+      <div className={styles.right}>
+        <div className={styles.profile}>
+          <ProfileSvg></ProfileSvg>
+        </div>
+        <div className={styles.cart}>
+          <CartSvg></CartSvg>
+        </div>
+      </div>
     </nav>
   );
 }
