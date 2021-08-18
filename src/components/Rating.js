@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as Star } from "./assets/icons/star_black_24dp.svg";
 import { ReactComponent as StarBorder } from "./assets/icons/star_border_black_24dp.svg";
 

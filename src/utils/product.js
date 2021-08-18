@@ -62,7 +62,6 @@ function getRandomProduct() {
  * @param {Object} options Any properties that are not implemented.
  * @returns {Object} Object with this format: {name, id, img, price, getPrice, quantity, options}.
  */
-
 function generateRandomProduct(
   name,
   id = uuidv4(),

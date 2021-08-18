@@ -7,12 +7,12 @@ import { Redirect } from "react-router";
 import Layout from "./components/layout/Layout";
 import Breadcrumb from "./components/business/Breadcrumb";
 
-import Cart from "./pages/Cart";
+import Cart from "./pages/Cart/Cart";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Product from "./pages/Product";
-import Components from "./pages/Components";
-import Discover from "./pages/Discover";
+import Product from "./pages/Products/Product/Product";
+import Test from "./pages/Test";
+import ProductsSection from "./pages/Products/Products";
 import Details from "./pages/Details";
 import Shipping from "./pages/Shipping";
 import Payment from "./pages/Payment";
@@ -52,10 +52,14 @@ function App() {
                 <ScrollToTop>
                   <Switch>
                     <Route exact path="/product" component={Product}></Route>
-                    <Route exact path="/discover" component={Discover}></Route>
+                    <Route
+                      exact
+                      path="/discover"
+                      component={ProductsSection}
+                    ></Route>
                     <Route exact path="/cart" component={Cart}></Route>
                     <Route exact path="/about" component={About}></Route>
-                    <Route exact path="/components" component={Components} />
+                    <Route exact path="/test" component={Test} />
                     <Route exact path="/" component={Home}></Route>
                     <Route exact path={"/checkout/details"}>
                       <Breadcrumb pages={pages}> </Breadcrumb>

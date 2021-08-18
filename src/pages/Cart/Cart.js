@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Quantity from "../components/business/Quantity";
+import Quantity from "../../components/business/Quantity";
 import { Link } from "react-router-dom";
 import styles from "./cart.module.css";
-import LinkButton from "../components/buttons/LinkButton";
+import LinkButton from "../../components/buttons/LinkButton";
 import { useMediaQuery } from "react-responsive";
-import useCartContext from "../contexts/cart/useCartContext";
-import Section from "../components/sections/Section";
-import useCustomerContext from "../contexts/customer/useCustomerContext";
+import useCartContext from "../../contexts/cart/useCartContext";
+import Section from "../../components/sections/Section";
+import useCustomerContext from "../../contexts/customer/useCustomerContext";
 
 function ProductData({ product, removeProduct, updateProduct, isDektop }) {
   const { name, price, img, id } = product;

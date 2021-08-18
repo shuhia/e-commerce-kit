@@ -16,7 +16,7 @@ import Subscription from "../components/business/Subscription";
 import { NavbarDesktop, NavbarMobile } from "../components/navigation/Navbar";
 import useStoreContext from "../contexts/store/useStoreContext";
 
-function Components() {
+function Test() {
   const { randomProduct } = useStoreContext();
   return (
     <>
@@ -75,4 +75,4 @@ function Components() {
   );
 }
 
-export default Components;
+export default Test;
