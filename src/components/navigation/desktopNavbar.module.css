@@ -13,8 +13,6 @@
   z-index: 1000;
 }
 
-
-
 .container ul {
   flex: 1;
   display: grid;
@@ -35,26 +33,33 @@
   color: black;
 }
 
-.desktopItems {
+.left {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: auto;
+  width: 126px;
+  height: 34px;
+  margin: 0 165px;
 }
-
-.mobileItems {
+.right {
+  flex: 1;
   display: flex;
-  flex-flow: column;
-}
-
-.mobileMenu {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  justify-content: flex-end;
   align-items: center;
-  text-align: left;
+
+  padding-right: 170px;
+  gap: 20px;
 }
 
-.mobileMenu img {
-  padding: 5px;
-  height: 64px;
+.cart {
+}
+
+.profile {
+  width: 34px;
+  height: 34px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
 }
