@@ -5,17 +5,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Redirect } from "react-router";
 
 import Layout from "./components/layout/Layout";
-import Breadcrumb from "./components/business/Breadcrumb";
+import Breadcrumb from "./components/navigation/Breadcrumb";
 
-import Cart from "./pages/Cart/Cart";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Product from "./pages/Products/Product/Product";
-import Test from "./pages/Test";
-import ProductsSection from "./pages/Products/Products";
-import Details from "./pages/Details";
-import Shipping from "./pages/Shipping";
-import Payment from "./pages/Payment";
+import Cart from "./components/pages/Cart/Cart";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Product from "./components/pages/Products/Product/Product";
+import ProductsSection from "./components/pages/Products/Products";
+import Details from "./components/pages/Details";
+import Shipping from "./components/pages/Shipping";
+import Payment from "./components/pages/Payment";
 
 import CartProvider from "./contexts/cart/CartProvider";
 import StoreProvider from "./contexts/store/StoreProvider";
@@ -59,7 +58,6 @@ function App() {
                     ></Route>
                     <Route exact path="/cart" component={Cart}></Route>
                     <Route exact path="/about" component={About}></Route>
-                    <Route exact path="/test" component={Test} />
                     <Route exact path="/" component={Home}></Route>
                     <Route exact path={"/checkout/details"}>
                       <Breadcrumb pages={pages}> </Breadcrumb>

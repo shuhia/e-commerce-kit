@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Order from "../components/sections/Order";
-import LinkButton from "../components/buttons/LinkButton";
+import Order from "../sections/Order";
+import LinkButton from "../buttons/LinkButton";
 
 import { useRef } from "react";
 

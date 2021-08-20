@@ -1,6 +1,6 @@
 import React from "react";
 import useCartContext from "../../contexts/cart/useCartContext";
-import Coupon from "../business/Coupon";
+import Coupon from "../inputs/Coupon";
 import BackgroundCard from "../cards/BackgroundCard";
 import styles from "./order.module.css";
 

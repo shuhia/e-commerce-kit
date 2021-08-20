@@ -1,13 +1,13 @@
 import React from "react";
-import LinkButton from "../components/buttons/LinkButton";
+import LinkButton from "../buttons/LinkButton";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import Input from "../components/business/Input";
+import Input from "../inputs/Input";
 
-import Dropdown from "../components/business/Dropdown";
-import Order from "../components/sections/Order";
-import Section from "../components/sections/Section";
-import DetailsForm from "../components/forms/DetailsForm";
+import Dropdown from "../inputs/Dropdown";
+import Order from "../sections/Order";
+import Section from "../sections/Section";
+import DetailsForm from "../forms/DetailsForm";
 
 import faker from "faker";
 

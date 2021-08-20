@@ -1,7 +1,7 @@
 import React from "react";
 
-import LinkButton from "../components/buttons/LinkButton";
-import PaymentForm from "../components/forms/PaymentForm";
+import LinkButton from "../buttons/LinkButton";
+import PaymentForm from "../forms/PaymentForm";
 
 function Payment() {
   return (

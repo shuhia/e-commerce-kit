@@ -1,5 +1,5 @@
 import NavItem from "./NavItem";
-import styles from "./DesktopNavbar.module.css";
+import styles from "./desktopNavbar.module.css";
 import React from "react";
 
 import logo from "../assets/logo/logo.svg";

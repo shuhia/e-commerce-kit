@@ -3,7 +3,7 @@ import Navbar from "../navigation/Navbar";
 import Footer from "../sections/Footer";
 import NavItem from "../navigation/NavItem";
 import Profile from "../Profile";
-import CartItem from "../business/CartItem";
+import CartItem from "../cart/CartItem";
 
 function Layout(props) {
   const navItems = (

@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "../../components/sections/Section";
-import Cards from "../../components/cards/Cards";
-import ProductCard from "../../components/cards/ProductCard";
+import Section from "../../sections/Section";
+import Cards from "../../cards/Cards";
+import ProductCard from "../../cards/ProductCard";
 
 function Products() {
   return (

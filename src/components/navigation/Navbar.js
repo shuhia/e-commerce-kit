@@ -2,10 +2,10 @@
 import React from "react";
 
 import { useMediaQuery } from "react-responsive";
-import CartItem from "../business/CartItem";
+import CartItem from "../cart/CartItem";
 import MobileNavbar from "./MobileNavbar";
-
 import DesktopNavbar from "./DesktopNavbar";
+import styles from "./navbar.module.css";
 
 function Navbar({ navItems, cart = <CartItem></CartItem> }) {
   const onMobile = useMediaQuery({ query: "(max-width:800px)" });

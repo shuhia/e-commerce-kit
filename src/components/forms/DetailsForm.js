@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "../business/Input";
-import Dropdown from "../business/Dropdown";
+import Input from "../inputs/Input";
+import Dropdown from "../inputs/Dropdown";
 import LinkButton from "../buttons/LinkButton";
 import faker from "faker";
 import { Link } from "react-router-dom";

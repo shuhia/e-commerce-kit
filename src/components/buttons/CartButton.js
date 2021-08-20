@@ -1,5 +1,5 @@
 import SubmitButton from "./SubmitButton";
-import CartItem from "../business/CartItem";
+import CartItem from "../cart/CartItem";
 
 import React from "react";
 

@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Quantity from "../../../components/business/Quantity";
+import Quantity from "../../../inputs/Quantity";
 import styles from "./product.module.css";
 import { v4 as uuidv4 } from "uuid";
-import { useMediaQuery } from "react-responsive";
-import useCartContext from "../../../contexts/cart/useCartContext";
-import useCustomerContext from "../../../contexts/customer/useCustomerContext";
-import useStoreContext from "../../../contexts/store/useStoreContext";
-import { generateRandomProduct } from "../../../utils/utils";
-import CartButton from "../../../components/buttons/CartButton";
-import LinkButton from "../../../components/buttons/LinkButton";
+import useCartContext from "../../../../contexts/cart/useCartContext";
+import useCustomerContext from "../../../../contexts/customer/useCustomerContext";
+import { generateRandomProduct } from "../../../../utils/utils";
+import CartButton from "../../../buttons/CartButton";
+import LinkButton from "../../../buttons/LinkButton";
 
 function Product() {
   const { selectedProduct = generateRandomProduct() } = useCustomerContext();
