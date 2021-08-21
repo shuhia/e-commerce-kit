@@ -19,7 +19,7 @@ import Payment from "./components/pages/Payment";
 import CartProvider from "./contexts/cart/CartProvider";
 import StoreProvider from "./contexts/store/StoreProvider";
 import CustomerProvider from "./contexts/customer/CustomerProvider";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 function ScrollToTop(props) {
