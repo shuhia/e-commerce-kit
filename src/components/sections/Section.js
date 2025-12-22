@@ -21,8 +21,7 @@ function Section(props) {
         <h1>{title}</h1>
         <p>{description}</p>
       </header>
-      <div className={styles.content}>{content}</div>
-      {props.children}
+      <div className={styles.content}>{content ?? props.children}</div>
     </section>
   );
 }

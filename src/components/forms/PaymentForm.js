@@ -103,7 +103,7 @@ const PaymentForm = () => {
             formId="payment"
           ></SubmitButton>
           <br></br>
-          <Link to="checkout/shipping">"Back to shipping"</Link>
+          <Link to="/checkout/shipping">Back to shipping</Link>
         </form>
       ) : (
         <div className={styles.paid}>

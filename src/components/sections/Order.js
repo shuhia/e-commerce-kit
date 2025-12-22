@@ -13,7 +13,7 @@ function Order({ shipping = 0 }) {
       <table className={styles.table}>
         {items.map((item) => {
           return (
-            <tr className={styles.product} colspan="2">
+            <tr className={styles.product} colSpan="2" key={item.id}>
               <td style={{ position: "relative" }}>
                 <img src={item.img} width="160px"></img>
                 <span
@@ -40,7 +40,7 @@ function Order({ shipping = 0 }) {
         })}
 
         <tr>
-          <td className={styles.coupon} colspan="2">
+          <td className={styles.coupon} colSpan="2">
             <Coupon></Coupon>
           </td>
         </tr>

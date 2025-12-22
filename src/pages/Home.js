@@ -10,14 +10,14 @@ import useStoreContext from "../contexts/store/useStoreContext";
 import Featured from "../components/sections/Featured";
 
 function Home() {
-  const { products } = useStoreContext();
+  const { products, featuredProducts } = useStoreContext();
   return (
     <>
       <Header></Header>
       <Products products={products}></Products>
       <Benefits></Benefits>
       <Testimonials></Testimonials>
-      <Featured></Featured>
+      <Featured products={featuredProducts}></Featured>
     </>
   );
 }

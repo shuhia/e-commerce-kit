@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import StoreContext from "./StoreContext";
 import {
-  generateRandomProducts,
-  generateRandomProduct,
-} from "../../utils/utils";
+  PRODUCT_CATALOG,
+  getFeaturedProducts,
+  getProductById,
+} from "../../utils/product";
 
 function StoreProvider(props) {
-  function fetchProducts() {}
+  const [products] = useState(PRODUCT_CATALOG);
 
-  // Create 4 random products and store it in products
-  const [products, setProducts] = useState(generateRandomProducts(4));
+  const featuredProducts = useMemo(() => getFeaturedProducts(), []);
 
-  const product = products[0];
+  const getProduct = useCallback(
+    (id) => {
+      return getProductById(id) ?? products[0];
+    },
+    [products]
+  );
 
-  const value = { product, products };
+  const value = { products, featuredProducts, getProduct };
+
   return (
     <StoreContext.Provider value={value}>
       {props.children}
