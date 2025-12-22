@@ -66,7 +66,7 @@ function DetailsForm() {
         name="Go to shipping"
         to={"/checkout" + "/shipping"}
       ></LinkButton>
-      <Link to="/checkout/cart">Back to cart</Link>
+      <Link to="/cart">Back to cart</Link>
     </form>
   );
 }

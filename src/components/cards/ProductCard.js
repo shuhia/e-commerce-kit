@@ -11,7 +11,7 @@ function ProductCard({ product = generateRandomProduct() }) {
   const { setSelectedProduct } = useCustomerContext();
 
   function handleClick(e) {
-    history.push("/product");
+    history.push(`/product?id=${product.id}`);
     setSelectedProduct(product);
   }
   return (

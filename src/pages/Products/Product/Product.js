@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Quantity from "../../../components/business/Quantity";
 import styles from "./product.module.css";
 import { v4 as uuidv4 } from "uuid";
-import { useMediaQuery } from "react-responsive";
 import useCartContext from "../../../contexts/cart/useCartContext";
 import useCustomerContext from "../../../contexts/customer/useCustomerContext";
 import useStoreContext from "../../../contexts/store/useStoreContext";
 import { generateRandomProduct } from "../../../utils/utils";
 import CartButton from "../../../components/buttons/CartButton";
 import LinkButton from "../../../components/buttons/LinkButton";
+import { useLocation } from "react-router-dom";
 
 function Product() {
-  const { selectedProduct = generateRandomProduct() } = useCustomerContext();
-
-  const product = selectedProduct;
+  const location = useLocation();
+  const { getProduct } = useStoreContext();
+  const { selectedProduct, setSelectedProduct } = useCustomerContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,7 +22,27 @@ function Product() {
 
   const { addItem } = useCartContext();
 
-  const { name, id, img, price } = product;
+  const productFromQuery = useMemo(() => {
+    const params = new URLSearchParams(location.search);
+    const productId = params.get("id");
+    if (productId) {
+      return getProduct(productId);
+    }
+    return undefined;
+  }, [getProduct, location.search]);
+
+  const product = useMemo(() => {
+    return selectedProduct ?? productFromQuery ?? generateRandomProduct();
+  }, [selectedProduct, productFromQuery]);
+
+  useEffect(() => {
+    if (product) {
+      setSelectedProduct(product);
+    }
+  }, [product, setSelectedProduct]);
+
+  const { name, img, price } = product;
+
   function handleSubmit(e) {
     e.preventDefault();
     const subcription = e.target["oneTime"].checked
